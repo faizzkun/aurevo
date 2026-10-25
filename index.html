@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AUREVO — Own the life you imagined | Luxury Real Estate Pakistan</title>
+<meta name="description" content="Aurevo is Pakistan's luxury real estate platform: verified homes in Lahore, Karachi and Islamabad, transparent pricing in Lakh and Crore, flexible payment plans, and a full toolkit for buyers, sellers and investors.">
+<meta property="og:title" content="AUREVO — Own the life you imagined">
+<meta property="og:description" content="Verified homes, transparent pricing, flexible plans. Lahore, Karachi, Islamabad.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06201A">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Manrope:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json" id="jsonld">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Aurevo","slogan":"Own the life you imagined.","areaServed":["Lahore","Karachi","Islamabad"],"telephone":"+44 7585 438180"}</script>
+<style>
+:root{--midnight:#06201A;--pine:#0B2F26;--gold:#C9A96A;--softgold:#E4D2A5;--ivory:#F6F1E7;--charcoal:#121212;--mist:#A9B5AF;--goldgrad:linear-gradient(135deg,#E4D2A5,#C9A96A,#9C7E43);--radius:24px;--hair:1px solid rgba(201,169,106,.22)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--midnight);color:#fff;font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+body.light-urdu{font-family:"Noto Nastaliq Urdu",Manrope,sans-serif}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;letter-spacing:-.02em;line-height:1.05}
+h1{font-size:clamp(44px,7vw,120px)}h2{font-size:clamp(32px,4.5vw,72px)}h3{font-size:clamp(22px,2.5vw,32px)}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:800;color:var(--gold)}
+.mono{font-family:"JetBrains Mono",monospace}
+a{color:var(--softgold)}button{font:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+.wrap{max-width:1440px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+section{padding:96px 0} @media(max-width:700px){section{padding:64px 0}}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+/* Preloader */
+#preloader{position:fixed;inset:0;background:var(--midnight);z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+#preloader.done{transform:translateY(-100%)}
+#preloader svg path{stroke:var(--gold);stroke-width:2;fill:none;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.4s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+#preCount{font-family:"JetBrains Mono",monospace;font-size:28px;color:var(--softgold)}
+/* Header + progress + cursor */
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--goldgrad);z-index:300;width:0%}
+header{position:fixed;top:0;left:0;right:0;z-index:250;transition:transform .35s,background .35s,backdrop-filter .35s}
+header.hide{transform:translateY(-100%)}
+header.glass{background:rgba(6,32,26,.82);backdrop-filter:blur(20px);border-bottom:var(--hair)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo{font-family:Fraunces,serif;font-weight:900;font-size:26px;letter-spacing:.06em;cursor:pointer}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap}
+.navlinks button{background:none;border:0;color:#fff;font-weight:700;font-size:14px;padding:8px}
+.navlinks button.active{color:var(--gold)}
+.btn{border:0;border-radius:999px;padding:13px 22px;font-weight:800;min-height:48px;background:var(--goldgrad);color:#1a1405}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff}
+.btn.dark{background:#121212;color:#fff}
+.btn:active{transform:scale(.97)}
+.magnetic{transition:transform .2s}
+#cursorDot,#cursorRing{position:fixed;top:0;left:0;pointer-events:none;z-index:400;border-radius:50%;display:none}
+@media(hover:hover) and (min-width:900px){#cursorDot{display:block;width:8px;height:8px;background:var(--gold)}#cursorRing{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold);color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.1em;transition:width .25s,height .25s}}
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 1.2s}
+.hero-tint{position:absolute;inset:0}
+.hero-tint.dawn{background:linear-gradient(180deg,rgba(255,190,90,.35),rgba(6,32,26,.85))}
+.hero-tint.day{background:linear-gradient(180deg,rgba(246,241,231,.12),rgba(6,32,26,.85))}
+.hero-tint.dusk{background:linear-gradient(180deg,rgba(255,140,60,.35),rgba(6,32,26,.88))}
+.hero-tint.night{background:linear-gradient(180deg,rgba(4,10,30,.55),rgba(6,32,26,.92))}
+.hero-content{position:relative;z-index:2;width:100%}
+.hero h1 em{font-style:italic;color:var(--softgold)}
+.skyline{position:absolute;bottom:0;left:0;right:0;height:180px;opacity:.9;pointer-events:none}
+.searchpill{display:flex;gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:var(--hair);border-radius:20px;padding:12px;margin-top:26px}
+.searchpill select,.searchpill input{background:rgba(6,32,26,.85);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px;min-height:48px;flex:1;min-width:140px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:900px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:rgba(255,255,255,.06);backdrop-filter:blur(20px);border:var(--hair);border-radius:var(--radius);padding:20px}
+.stat b{font-family:Fraunces,serif;font-size:36px;color:var(--softgold);display:block}
+.stat span{color:var(--mist);font-size:13px}
+.light{background:var(--ivory);color:var(--charcoal)}
+.light .muted{color:#5a5a5a}
+.muted{color:var(--mist)}
+.card{background:var(--pine);border:var(--hair);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.card.lightcard{background:#fff;color:var(--charcoal);border:1px solid rgba(0,0,0,.08)}
+.card img{width:100%;height:210px;object-fit:cover;transition:transform .8s}
+.card:hover img{transform:scale(1.05)}
+.cardbody{padding:18px}
+.price{font-family:Fraunces,serif;font-size:24px;font-weight:900;color:var(--softgold)}
+.lightcard .price{color:#7a5c1e}
+.chip{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(201,169,106,.18);border:1px solid rgba(201,169,106,.4);color:var(--softgold);border-radius:999px;padding:5px 10px;margin:2px}
+.heart{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.4);color:#fff;font-size:20px}
+.heart.on{color:#ff4d5e;border-color:#ff4d5e;animation:burst .4s}
+@keyframes burst{0%{transform:scale(1)}50%{transform:scale(1.4)}100%{transform:scale(1)}}
+.grid{display:grid;gap:18px}
+@media(min-width:700px){.grid.cols3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.grid.cols3{grid-template-columns:repeat(3,1fr)}}
+.grid.cols2{grid-template-columns:1fr} @media(min-width:900px){.grid.cols2{grid-template-columns:1fr 1fr}}
+.grid.cols4{grid-template-columns:repeat(2,1fr)} @media(min-width:1100px){.grid.cols4{grid-template-columns:repeat(4,1fr)}}
+input,select,textarea{font:inherit}
+.field{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:13px;color:#fff;min-height:50px}
+.light input,.light select,.light textarea,.light .field{background:#fff;color:#121212;border:1px solid rgba(0,0,0,.15)}
+label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mist)}
+.light label{color:#666}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;min-height:44px}
+.tab.on{background:var(--goldgrad);color:#1a1405;border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.12);text-align:left}
+.light th,.light td{border-color:rgba(0,0,0,.1)}
+.marquee{overflow:hidden;white-space:nowrap;border-top:var(--hair);border-bottom:var(--hair);padding:16px 0}
+.marquee span{display:inline-block;animation:scroll 28s linear infinite;font-family:Fraunces,serif;font-size:26px;color:var(--softgold);padding-right:48px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.hscroll{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.hscroll>*{flex:0 0 86%;scroll-snap-align:center}
+@media(min-width:900px){.hscroll>*{flex:0 0 46%}}
+.pin{position:relative}
+.pulse{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(201,169,106,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 14px rgba(201,169,106,0)}100%{box-shadow:0 0 0 0 rgba(201,169,106,0)}}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:350;background:var(--pine);border-top:1px solid var(--gold);border-radius:24px 24px 0 0;padding:22px;max-height:88dvh;overflow:auto;transform:translateY(105%);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.sheet.open{transform:translateY(0)}
+.modal{position:fixed;inset:0;z-index:360;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modalbox{background:var(--pine);border:var(--hair);border-radius:24px;max-width:900px;width:100%;max-height:92dvh;overflow:auto;padding:20px}
+.orb{position:fixed;right:18px;bottom:88px;z-index:280;width:60px;height:60px;border-radius:50%;background:var(--goldgrad);border:0;font-size:26px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+@media(min-width:900px){.orb{bottom:24px}}
+.tabbar{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;z-index:260;background:rgba(11,47,38,.92);backdrop-filter:blur(20px);border:var(--hair);border-radius:999px;padding:6px;display:flex;gap:4px}
+@media(min-width:900px){.tabbar{display:none}}
+.tabbar button{background:none;border:0;color:#fff;padding:10px 14px;border-radius:999px;font-weight:700;font-size:12px;min-height:48px}
+.tabbar button.on{background:var(--goldgrad);color:#1a1405}
+.view{display:none}.view.active{display:block}
+.stickycta{position:sticky;bottom:0;background:rgba(6,32,26,.95);backdrop-filter:blur(12px);padding:12px;display:flex;gap:10px;z-index:20}
+.nightimg{filter:brightness(.55) saturate(1.2) hue-rotate(15deg)}
+.gauge{width:92px;height:92px}
+.kanban{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;overflow-x:auto}
+@media(max-width:900px){.kanban{grid-template-columns:1fr}}
+.kan{ background:rgba(255,255,255,.05);border:var(--hair);border-radius:16px;padding:12px;min-height:220px}
+.leadcard{background:#0d1426;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin:8px 0;cursor:grab}
+.footerword{font-family:Fraunces,serif;font-size:clamp(60px,14vw,180px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(201,169,106,.5);text-align:center}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:500;background:#fff;color:#000;padding:10px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain"></div>
+<div id="progress"></div>
+<div id="cursorDot"></div><div id="cursorRing"><span id="cursorLabel"></span></div>
+<div id="preloader">
+<svg width="220" height="90" viewBox="0 0 220 90"><path d="M10 80 L60 20 L110 80 M60 20 L60 80 M130 80 L130 20 L170 50 L130 80 M185 80 L185 20"/></svg>
+<div style="font-family:Fraunces,serif;font-size:34px;letter-spacing:.12em">AUREVO</div>
+<div id="preCount">0%</div>
+<div style="color:var(--mist);font-size:13px;letter-spacing:.14em">OWN THE LIFE YOU IMAGINED</div>
+</div>
+<header id="siteHeader">
+<div class="wrap nav">
+<div class="logo" onclick="showView('home')">A<span>UREVO</span></div>
+<nav class="navlinks" id="navLinks" aria-label="Main navigation"></nav>
+<div style="display:flex;gap:8px;align-items:center">
+<button class="btn ghost" style="min-height:44px;padding:9px 14px" onclick="toggleLang()" id="langBtn">EN / UR</button>
+<button class="btn" style="min-height:44px;padding:9px 16px" onclick="showView('contact')">Book Viewing</button>
+</div>
+</div>
+</header>
+
+<main id="main">
+<!-- HOME -->
+<section id="view-home" class="view active" style="padding:0">
+<div class="hero">
+<div class="hero-bg" id="heroBg" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1800&auto=format&fit=crop')"></div>
+<div class="hero-tint day" id="heroTint"></div>
+<svg class="skyline" viewBox="0 0 1440 180" preserveAspectRatio="none" id="skylineSvg"><path d="M0 180 L0 110 L80 110 L80 70 L120 70 L120 110 L200 110 L200 50 L260 50 L260 110 L340 110 L340 90 L420 90 L420 110 L520 110 L520 40 L600 40 L600 110 L700 110 L700 80 L780 80 L780 110 L880 110 L880 55 L960 55 L960 110 L1060 110 L1060 75 L1140 75 L1140 110 L1240 110 L1240 45 L1320 45 L1320 110 L1440 110 L1440 180 Z" fill="#06201A" opacity="0.92"/></svg>
+<div class="wrap hero-content">
+<p class="eyebrow">Lahore • Karachi • Islamabad — Verified Homes</p>
+<h1>Find the home<br>that <em>finds you back.</em></h1>
+<p style="max-width:640px;font-size:18px">Not another listing site. Aurevo verifies titles, shows real prices in Lakh and Crore, and builds a payment plan around your life — not the other way round.</p>
+<div class="searchpill">
+<select id="heroCity" aria-label="City"><option value="">All Cities</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option></select>
+<select id="heroType" aria-label="Type"><option value="">All Types</option><option>House</option><option>Apartment</option><option>Plot</option><option>Commercial</option></select>
+<select id="heroBudget" aria-label="Budget"><option value="">Any Budget</option><option value="20000000">Up to PKR 2 Crore</option><option value="50000000">Up to PKR 5 Crore</option><option value="100000000">Up to PKR 10 Crore</option><option value="200000000">Up to PKR 20 Crore</option></select>
+<button class="btn" onclick="heroSearch()">Search Homes</button>
+</div>
+<p style="color:var(--mist);font-size:13px" id="timeNote"></p>
+</div>
+</div>
+
+<div class="wrap" style="padding-top:40px">
+<div class="stats" id="trustStats"></div>
+</div>
+
+<section style="padding-bottom:40px">
+<div class="wrap">
+<p class="eyebrow">Price to Life</p>
+<h2>Drag your budget.<br>Watch life change.</h2>
+<label>Your budget: <b class="mono" id="ptlPrice">PKR 3.50 Crore</b></label>
+<input type="range" id="ptlSlider" min="5000000" max="200000000" step="2500000" value="35000000" oninput="priceToLife()">
+<p id="ptlSentence" style="font-size:19px;max-width:800px"></p>
+<div class="grid cols3" id="ptlCards"></div>
+</div>
+</section>
+
+<section class="light" style="padding-top:40px">
+<div class="wrap">
+<p class="eyebrow">Featured Showcase</p>
+<h2 style="color:#121212">Six homes. Six stories.<br><span style="font-style:italic;color:#7a5c1e">Scroll sideways.</span></h2>
+<div class="hscroll" id="showcase"></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="eyebrow">Why Aurevo</p>
+<h2>Built on trust,<br>not on templates.</h2>
+<div class="grid cols4" id="whyCards"></div>
+</div>
+</section>
+
+<section class="light">
+<div class="wrap">
+<div class="grid cols2">
+<div>
+<p class="eyebrow">City Map Teaser</p>
+<h2 style="color:#121212">Where life<br>actually happens.</h2>
+<p class="muted">DHA Lahore, Bahria Town, Gulberg, Clifton, DHA Karachi, F-7 and E-11 Islamabad — pins below pulse where families are actually moving in 2026. Open Explore to filter by the same cities.</p>
+<button class="btn dark" onclick="showView('properties')">Explore All Cities</button>
+</div>
+<div style="position:relative;background:#0B2F26;border-radius:24px;min-height:320px;overflow:hidden">
+<div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:40px 40px"></div>
+<div style="position:absolute;left:22%;top:28%"><div class="pulse"></div><div style="font-weight:800;margin-top:8px">DHA Lahore</div></div>
+<div style="position:absolute;left:58%;top:62%"><div class="pulse"></div><div style="font-weight:800;margin-top:8px">Clifton, Karachi</div></div>
+<div style="position:absolute;left:72%;top:24%"><div class="pulse"></div><div style="font-weight:800;margin-top:8px">F-7, Islamabad</div></div>
+<div style="position:absolute;left:38%;top:68%"><div class="pulse"></div><div style="font-weight:800;margin-top:8px">Bahria Town</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="grid cols2">
+<div>
+<p class="eyebrow">Calculator Teaser</p>
+<h2>Know your monthly<br>installment in 10 seconds.</h2>
+<p class="muted">No forms, no calls, no pressure. Type a price, pick a plan, see the real monthly number — then take it to an advisor if you like it.</p>
+<button class="btn" onclick="showView('tools')">Open Full Toolkit</button>
+</div>
+<div class="card" style="padding:22px">
+<label>Property price (PKR)</label>
+<input class="field mono" type="number" id="miniPrice" value="35000000" oninput="miniCalc()">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div><label>Down payment %</label><input class="field mono" type="number" id="miniDown" value="20" oninput="miniCalc()"></div>
+<div><label>Tenure (years)</label><input class="field mono" type="number" id="miniTenure" value="10" oninput="miniCalc()"></div>
+</div>
+<div style="margin-top:16px"><span class="muted">Estimated monthly installment</span><div class="mono" style="font-size:34px;font-weight:700;color:var(--softgold)" id="miniEmi">—</div><div class="muted" id="miniNote"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="light">
+<div class="wrap">
+<p class="eyebrow">Before You Buy</p>
+<h2 style="color:#121212">Five steps. Zero regrets.</h2>
+<div id="stepper"></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="eyebrow">Families Who Moved In</p>
+<h2>Real people. Real keys.</h2>
+<div class="hscroll" id="testimonials"></div>
+<div class="marquee" style="margin-top:30px"><span>DHA Lahore • Bahria Town • Gulberg • Clifton • DHA Karachi • F-7 Islamabad • E-11 Islamabad • DHA Lahore • Bahria Town • Gulberg • Clifton • DHA Karachi • F-7 Islamabad • E-11 Islamabad •&nbsp;</span></div>
+</div>
+</section>
+
+<section class="light">
+<div class="wrap">
+<p class="eyebrow">Insights</p>
+<h2 style="color:#121212">Read before you sign.</h2>
+<div class="grid cols3" id="insightCards"></div>
+<button class="btn dark" style="margin-top:18px" onclick="showView('insights')">All Insights</button>
+</div>
+</section>
+
+<div class="wrap" style="padding-bottom:80px">
+<div class="card" style="padding:34px;text-align:center;background:linear-gradient(135deg,#0B2F26,#06201A)">
+<h2>Own the life<br>you imagined.</h2>
+<p class="muted">Talk to an advisor today. No spam, no pressure — a real plan in 30 minutes.</p>
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+<button class="btn magnetic" onclick="showView('contact')">Book a Free Call</button>
+<a class="btn ghost" style="text-decoration:none;display:inline-flex;align-items:center" target="_blank" rel="noopener" href="https://wa.me/447585438180?text=Hi%20Aurevo%2C%20I%20want%20to%20buy%20a%20home.">WhatsApp Advisor</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="view-properties" class="view">
+<div class="wrap">
+<p class="eyebrow">Explore</p>
+<h2>Properties</h2>
+<div class="searchpill" style="margin-top:10px">
+<input id="fSearch" placeholder="Search title, area, city…" oninput="renderProperties()">
+<select id="fCity" onchange="renderProperties()"><option value="">All Cities</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option></select>
+<select id="fType" onchange="renderProperties()"><option value="">All Types</option><option>House</option><option>Apartment</option><option>Plot</option><option>Commercial</option></select>
+<select id="fStatus" onchange="renderProperties()"><option value="">Any Status</option><option>Ready</option><option>Under Construction</option></select>
+<select id="fSort" onchange="renderProperties()"><option value="featured">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="size">Largest First</option></select>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center">
+<label style="display:flex;gap:8px;align-items:center">Max price: <b class="mono" id="fPriceLabel">Any</b></label>
+<input type="range" id="fPrice" min="5000000" max="200000000" step="5000000" value="200000000" style="max-width:320px" oninput="renderProperties()">
+<button class="tab" onclick="toggleFavOnly()" id="favOnlyBtn">Saved only</button>
+<button class="tab" onclick="toggleViewMode()" id="viewModeBtn">View: Grid</button>
+<button class="btn ghost" onclick="saveSearch()">Save Search</button>
+</div>
+<div class="grid cols3" id="propGrid" style="margin-top:22px"></div>
+<p id="propEmpty" class="muted hidden">No properties match these filters. Try widening the budget or clearing the city.</p>
+</div>
+</section>
+
+<!-- DETAIL -->
+<section id="view-detail" class="view"><div class="wrap" id="detailWrap"></div></section>
+
+<!-- TOOLS -->
+<section id="view-tools" class="view">
+<div class="wrap">
+<p class="eyebrow">SaaS Toolkit</p>
+<h2>Tools that tell<br>the truth.</h2>
+<p class="muted">Every tool updates live. No submit button, no waiting. Results save on this device, and you can send any plan to an advisor in one tap.</p>
+<div class="tabs" id="toolTabs" style="margin:18px 0"></div>
+<div id="toolBody"></div>
+</div>
+</section>
+
+<!-- ABOUT / SERVICES / INSIGHTS / CONTACT / FAVORITES / COMPARE / ADMIN -->
+<section id="view-about" class="view"><div class="wrap" id="aboutWrap"></div></section>
+<section id="view-services" class="view"><div class="wrap" id="servicesWrap"></div></section>
+<section id="view-insights" class="view"><div class="wrap" id="insightsWrap"></div></section>
+<section id="view-contact" class="view"><div class="wrap" id="contactWrap"></div></section>
+<section id="view-favorites" class="view"><div class="wrap" id="favWrap"></div></section>
+<section id="view-compare" class="view"><div class="wrap" id="compareWrap"></div></section>
+<section id="view-admin" class="view"><div class="wrap" id="adminWrap"></div></section>
+</main>
+
+<footer style="border-top:var(--hair);padding:60px 0 110px">
+<div class="wrap">
+<div class="grid cols2">
+<div><div class="logo">A<span>UREVO</span></div><p class="muted">Own the life you imagined. Verified homes, transparent pricing, flexible plans — Lahore, Karachi, Islamabad.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><input class="field" id="newsEmail" placeholder="Email for market updates" style="max-width:280px"><button class="btn" onclick="subscribeNews()">Subscribe</button></div></div>
+<div style="display:flex;gap:40px;flex-wrap:wrap">
+<div><b>Explore</b><div style="display:grid;gap:6px;margin-top:10px"><button class="tab" onclick="showView('properties')">Properties</button><button class="tab" onclick="showView('tools')">Tools</button><button class="tab" onclick="showView('insights')">Insights</button></div></div>
+<div><b>Company</b><div style="display:grid;gap:6px;margin-top:10px"><button class="tab" onclick="showView('about')">About</button><button class="tab" onclick="showView('services')">Services</button><button class="tab" onclick="showView('contact')">Contact</button></div></div>
+<div><b>Contact</b><p class="muted" style="font-size:14px">WhatsApp: +44 7585 438180<br>Email: hello@aurevo.example<br>Lahore • Karachi • Islamabad</p><button class="tab" onclick="showView('admin')">Admin Login</button></div>
+</div>
+</div>
+<div class="footerword">AUREVO</div>
+<p class="muted" style="text-align:center;font-size:13px">© 2026 Aurevo. Prices in PKR, formatted in Lakh / Crore. Tax estimates are indicative only — confirm with a licensed advisor before purchase. <span onclick="showView('contact')" style="cursor:pointer;text-decoration:underline">Privacy / Terms</span></p>
+</div>
+</footer>
+
+<div class="tabbar" id="tabbar">
+<button data-t="home" class="on" onclick="showView('home')">Home</button>
+<button data-t="properties" onclick="showView('properties')">Explore</button>
+<button data-t="tools" onclick="showView('tools')">Tools</button>
+<button data-t="favorites" onclick="showView('favorites')">Saved</button>
+<button data-t="contact" onclick="showView('contact')">Contact</button>
+</div>
+
+<button class="orb" id="aiOrb" aria-label="Ask Aurevo">A</button>
+<div class="sheet" id="aiSheet">
+<div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">Ask Aurevo</h3><button class="btn ghost" onclick="closeAI()">Close</button></div>
+<p class="muted" style="font-size:14px">Try: "3 bed house Lahore under 5 crore" or "apartment Karachi under 2 crore".</p>
+<div id="aiMsgs" style="display:grid;gap:10px;max-height:46dvh;overflow:auto"></div>
+<div id="aiCards" style="display:grid;gap:10px;margin-top:12px"></div>
+<div style="display:flex;gap:8px;margin-top:12px"><input class="field" id="aiInput" placeholder="Ask about budget, city, type…" onkeydown="if(event.key==='Enter')askAI()"><button class="btn" onclick="askAI()">Ask</button></div>
+<button class="btn ghost" style="margin-top:10px" onclick="aiWhatsApp()">Continue on WhatsApp with Advisor</button>
+</div>
+
+<div class="modal" id="lightbox"><div class="modalbox"><div style="display:flex;justify-content:space-between"><h3 id="lbTitle" style="margin:0">Gallery</h3><button class="btn ghost" onclick="closeModal('lightbox')">Close</button></div><img id="lbImg" style="width:100%;height:420px;object-fit:cover;border-radius:16px;margin-top:14px" alt="Property photo"><div style="display:flex;gap:10px;margin-top:12px"><button class="btn ghost" onclick="lbNav(-1)">Previous</button><button class="btn ghost" onclick="lbNav(1)">Next</button><span class="muted" id="lbCount"></span></div></div></div>
+<div class="modal" id="leadModal"><div class="modalbox" id="leadModalBox"></div></div>
+<div class="modal" id="passportModal"><div class="modalbox" id="passportBox"></div></div>
+<div class="modal" id="articleModal"><div class="modalbox" id="articleBox"></div></div>
+<div id="compareTray" style="position:fixed;left:50%;transform:translateX(-50%);bottom:76px;z-index:270;background:#0B2F26;border:1px solid var(--gold);border-radius:999px;padding:10px 16px;display:none;gap:10px;align-items:center;box-shadow:0 16px 40px rgba(0,0,0,.5)"><span id="compareCount">Compare (0)</span><button class="btn" style="padding:9px 16px;min-height:40px" onclick="showView('compare')">Compare Now</button><button class="btn ghost" style="padding:9px 12px;min-height:40px" onclick="clearCompare()">Clear</button></div>
+<div id="toast" style="position:fixed;left:50%;bottom:130px;transform:translateX(-50%);background:#fff;color:#111;font-weight:800;padding:12px 18px;border-radius:999px;z-index:500;display:none;max-width:92vw;text-align:center"></div>
+<script>
+const $=(id)=>document.getElementById(id);
+const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+const fmtPKR=(n)=>{n=Math.round(n);if(n>=10000000)return "PKR "+(n/10000000).toFixed(2).replace(/\.00$/,"")+" Crore";if(n>=100000)return "PKR "+(n/100000).toFixed(1).replace(/\.0$/,"")+" Lakh";return "PKR "+n.toLocaleString("en-PK")};
+const fmtNum=(n)=>Math.round(n).toLocaleString("en-PK");
+/* Finance: pure functions, edge cases handled */
+function emiReducing(P,annualRate,years){if(P<=0||years<=0)return 0;const n=years*12;if(!annualRate)return P/n;const r=annualRate/12/100;return P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)}
+function emiFlat(P,annualRate,years){if(P<=0||years<=0)return 0;const n=years*12;const markup=P*annualRate/100*years;return (P+markup)/n}
+function amortization(P,annualRate,years,method){const emi=method==="flat"?emiFlat(P,annualRate,years):emiReducing(P,annualRate,years);let bal=P;const rows=[];const n=years*12;for(let m=1;m<=n;m++){let interest=0,principal=emi;if(method==="flat"){interest=P*annualRate/100/12;principal=emi-interest}else{interest=bal*annualRate/12/100;principal=emi-interest}bal=Math.max(0,bal-principal);rows.push({m,emi,principal,interest,balance:bal});if(bal<=0)break}return{emi,rows}}
+function areaConvert(v,from,marlaSqft){const toSqft={marla:marlaSqft,kanal:marlaSqft*20,sqft:1,sqyd:9,sqm:10.7639,acre:43560};const sqft=v*(toSqft[from]||1);const out={};for(const k in toSqft)out[k]=sqft/toSqft[k];return out}
+/* Data: 14 properties */
+const IMG={
+h1:"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+h2:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
+h3:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+h4:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop",
+h5:"https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
+h6:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop",
+h7:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop",
+h8:"https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop",
+a1:"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop",
+a2:"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop",
+a3:"https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1200&auto=format&fit=crop",
+a4:"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
+p1:"https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+c1:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+c2:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"};
+const LS=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
+let PROPS=[
+{id:1,title:"The Courtyard House — DHA Phase 6",slug:"dha-phase6-courtyard-house",city:"Lahore",area:"DHA Phase 6",type:"House",status:"Ready",price:42500000,marla:10,sqft:2250,beds:5,baths:6,featured:true,images:[IMG.h1,IMG.h3,IMG.h6],amenities:["Gated Security","Solar Ready","Double Unit","Modular Kitchen","Home Office","Garden"],plan:{booking:10,down:20,quarterly:8,possession:10},life:{schools:92,hospitals:88,commute:84,safety:95,investment:90},agent:"Ayesha Rahman",desc:"A calm, light-filled 10 Marla house built for a family that works from home and hosts on weekends. Verified title, no hidden charges, and a payment plan you can actually read."},
+{id:2,title:"Palm Courtyard Villa — Bahria Town",slug:"bahria-palm-villa",city:"Lahore",area:"Bahria Town Sector C",type:"House",status:"Ready",price:35000000,marla:10,sqft:2250,beds:4,baths:5,featured:true,images:[IMG.h2,IMG.h7,IMG.h1],amenities:["Park Facing","Near School","Covered Parking","Laundry","Store"],plan:{booking:10,down:25,quarterly:6,possession:10},life:{schools:90,hospitals:82,commute:78,safety:93,investment:86},agent:"Bilal Hussain",desc:"Park-facing, quiet street, and a layout that keeps family life and guest life separate. Ideal for a first upgrade from an apartment to a real house."},
+{id:3,title:"Gulberg Heritage House — 1 Kanal",slug:"gulberg-1kanal-house",city:"Lahore",area:"Gulberg III",type:"House",status:"Ready",price:95000000,marla:20,sqft:4500,beds:6,baths:7,featured:true,images:[IMG.h4,IMG.h5,IMG.h2],amenities:["1 Kanal Plot","Servant Quarter","Pool Ready","Double Height Lounge","Basement"],plan:{booking:15,down:25,quarterly:4,possession:10},life:{schools:94,hospitals:93,commute:95,safety:90,investment:88},agent:"Ayesha Rahman",desc:"A rare 1 Kanal in central Gulberg. Old trees, wide road, and a house that does not need to prove anything. For buyers who want location first, everything else second."},
+{id:4,title:"Canal View Modern House — DHA Phase 9",slug:"dha-phase9-canal-house",city:"Lahore",area:"DHA Phase 9 Town",type:"House",status:"Under Construction",price:58000000,marla:14,sqft:3150,beds:5,baths:6,featured:false,images:[IMG.h6,IMG.h3,IMG.h4],amenities:["Canal View","Smart Locks","Rain Shower","Media Room"],plan:{booking:10,down:20,quarterly:10,possession:15},life:{schools:86,hospitals:80,commute:82,safety:92,investment:91},agent:"Usman Tariq",desc:"Under construction with a clear possession timeline and stage-wise payments. You lock today's price and move in when the finishing is done, not before."},
+{id:5,title:"Skyline 2-Bed Apartment — Clifton Block 4",slug:"clifton-skyline-apartment",city:"Karachi",area:"Clifton Block 4",type:"Apartment",status:"Ready",price:28500000,marla:0,sqft:1450,beds:2,baths:3,featured:true,images:[IMG.a1,IMG.a2,IMG.a3],amenities:["Sea Breeze","Lift + Generator","Gym","Covered Parking"],plan:{booking:10,down:30,quarterly:4,possession:10},life:{schools:88,hospitals:91,commute:90,safety:86,investment:84},agent:"Sara Iqbal",desc:"A bright 2-bed with a real sea breeze, not a sea view on paper. Perfect for a couple, a small family, or a high-demand rental."},
+{id:6,title:"Marina Heights 3-Bed — DHA Karachi Phase 8",slug:"dha-karachi-marina-apartment",city:"Karachi",area:"DHA Phase 8",type:"Apartment",status:"Ready",price:42000000,marla:0,sqft:1950,beds:3,baths:4,featured:true,images:[IMG.a2,IMG.a4,IMG.a1],amenities:["Sea Facing","Pool","Community Hall","24/7 Security"],plan:{booking:10,down:20,quarterly:6,possession:10},life:{schools:90,hospitals:89,commute:85,safety:94,investment:87},agent:"Sara Iqbal",desc:"Family-sized, sea-facing, and in a building where the lift actually works. The monthly cost is honest, and so is the rent you can expect if you invest."},
+{id:7,title:"Gulshan Family Apartment — 3 Bed",slug:"gulshan-family-apartment",city:"Karachi",area:"Gulshan-e-Iqbal",type:"Apartment",status:"Ready",price:17500000,marla:0,sqft:1250,beds:3,baths:3,featured:false,images:[IMG.a3,IMG.a2,IMG.a4],amenities:["Near University","Family Building","Water 24/7","Parking"],plan:{booking:15,down:25,quarterly:4,possession:10},life:{schools:92,hospitals:84,commute:88,safety:80,investment:78},agent:"Bilal Hussain",desc:"The sensible buy: close to schools and hospitals, priced for a salaried family, and easy to rent out if plans change."},
+{id:8,title:"E-11 Hillside Apartment — 2 Bed",slug:"e11-hillside-apartment",city:"Islamabad",area:"E-11/2",type:"Apartment",status:"Under Construction",price:24000000,marla:0,sqft:1350,beds:2,baths:2,featured:false,images:[IMG.a4,IMG.a1,IMG.a3],amenities:["Margalla View","Balcony","Power Backup","Gym"],plan:{booking:10,down:20,quarterly:8,possession:10},life:{schools:85,hospitals:86,commute:80,safety:95,investment:89},agent:"Fatima Noor",desc:"Wake up to the Margalla Hills. A calm, well-planned apartment for professionals who want Islamabad quiet without Islamabad prices."},
+{id:9,title:"DHA Phase 9 Residential Plot — 10 Marla",slug:"dha-phase9-plot",city:"Lahore",area:"DHA Phase 9",type:"Plot",status:"Ready",price:18500000,marla:10,sqft:2250,beds:0,baths:0,featured:false,images:[IMG.p1,IMG.h8,IMG.p1],amenities:["Corner Plot","Possession Ready","Gated Block","Wide Road"],plan:{booking:20,down:30,quarterly:2,possession:0},life:{schools:84,hospitals:78,commute:80,safety:92,investment:93},agent:"Usman Tariq",desc:"A clean 10 Marla plot with possession in hand. Build now, build later, or hold — the location does the work either way."},
+{id:10,title:"Bahria Town Plot — 5 Marla",slug:"bahria-5marla-plot",city:"Lahore",area:"Bahria Town Sector B",type:"Plot",status:"Ready",price:9500000,marla:5,sqft:1125,beds:0,baths:0,featured:false,images:[IMG.p1,IMG.h6,IMG.p1],amenities:["Near Park","Possession Ready","All Dues Clear"],plan:{booking:20,down:30,quarterly:2,possession:0},life:{schools:88,hospitals:80,commute:76,safety:93,investment:88},agent:"Ayesha Rahman",desc:"The entry ticket to Bahria Town. Small plot, clear dues, and a realistic first step into property ownership."},
+{id:11,title:"F-7 Commercial Plot — Prime",slug:"f7-commercial-plot",city:"Islamabad",area:"F-7 Markaz",type:"Plot",status:"Ready",price:165000000,marla:8,sqft:1800,beds:0,baths:0,featured:true,images:[IMG.p1,IMG.c1,IMG.c2],amenities:["Markaz Location","High Footfall","Corner","Commercial NOC"],plan:{booking:25,down:35,quarterly:2,possession:0},life:{schools:90,hospitals:90,commute:96,safety:93,investment:92},agent:"Fatima Noor",desc:"For a business that needs to be seen. F-7 Markaz footfall, a corner position, and a commercial NOC you can verify before you pay a rupee."},
+{id:12,title:"Main Boulevard Shop — Gulberg",slug:"gulberg-main-boulevard-shop",city:"Lahore",area:"Gulberg Main Boulevard",type:"Commercial",status:"Ready",price:72000000,marla:0,sqft:1100,beds:0,baths:1,featured:false,images:[IMG.c1,IMG.c2,IMG.a1],amenities:["Main Road Front","Tenant Ready","Basement Storage"],plan:{booking:20,down:30,quarterly:4,possession:0},life:{schools:80,hospitals:85,commute:96,safety:88,investment:90},agent:"Bilal Hussain",desc:"A shop that already earns. Main Boulevard frontage, a sitting tenant, and rent that covers a large part of the monthly plan."},
+{id:13,title:"DHA Karachi Office Floor — Clifton",slug:"dha-karachi-office-floor",city:"Karachi",area:"Clifton Block 5",type:"Commercial",status:"Ready",price:88000000,marla:0,sqft:2400,beds:0,baths:3,featured:false,images:[IMG.c2,IMG.c1,IMG.a2],amenities:["Open Plan","Meeting Rooms","Lift","Parking Bays"],plan:{booking:20,down:30,quarterly:4,possession:0},life:{schools:82,hospitals:90,commute:92,safety:90,investment:86},agent:"Sara Iqbal",desc:"An office floor for a team that has outgrown working from home. Open plan, real meeting rooms, and a Clifton address clients respect."},
+{id:14,title:"Islamabad F-7 House — 14 Marla",slug:"f7-14marla-house",city:"Islamabad",area:"F-7/3",type:"House",status:"Ready",price:125000000,marla:14,sqft:3150,beds:5,baths:6,featured:true,images:[IMG.h8,IMG.h1,IMG.h5],amenities:["F-7 Location","Garden","Study","Driver Quarter"],plan:{booking:15,down:25,quarterly:4,possession:10},life:{schools:95,hospitals:92,commute:90,safety:96,investment:85},agent:"Fatima Noor",desc:"Quiet street, mature trees, and a house that feels settled from day one. For a family that wants Islamabad at its best, without compromise."}];
+const TESTIMONIALS=[
+{name:"Ahmed & Mariam Raza",place:"DHA Phase 6, Lahore",text:"Aurevo showed us the payment plan in numbers we could check, not in promises. We knew the monthly figure before we fell in love with the house. That changed everything.",img:IMG.h1},
+{name:"Sana Sheikh",place:"Clifton, Karachi",text:"I bought from abroad. Every document was verified, every call was recorded in the CRM, and the keys were handed over on the date they promised.",img:IMG.a1},
+{name:"Omar Farooq",place:"E-11, Islamabad",text:"As an investor, I care about yield and exit, not brochures. Aurevo's ROI tool showed me the break-even year before I paid anything.",img:IMG.h2},
+{name:"Bilal & Hira Khan",place:"Bahria Town, Lahore",text:"We were first-time buyers and terrified of hidden costs. There were none. Booking, down payment, quarterly — all in writing, all on time.",img:IMG.h6},
+{name:"Nadia Hussain",place:"Gulberg, Lahore",text:"They talked us out of a bigger house we could not afford, and into a plot we could. Two years later that plot paid for the house.",img:IMG.p1},
+{name:"Daniyal Ahmed",place:"DHA Karachi",text:"The after-sale care is real. Leak in month three, fixed in week one, no argument. That is why I sent my brother to Aurevo too.",img:IMG.c1}];
+const TEAM=[
+{name:"Ayesha Rahman",role:"Founder & CEO",bio:"15 years in Lahore real estate, 4,800 families housed."},
+{name:"Bilal Hussain",role:"Head of Sales",bio:"Knows every DHA file by heart, and says no when a deal is wrong."},
+{name:"Sara Iqbal",role:"Karachi Lead",bio:"Clifton and DHA Karachi specialist, ex-bank mortgage advisor."},
+{name:"Fatima Noor",role:"Islamabad Lead",bio:"F-7, E-11 and Bahria Enclave, with a legal-first approach."},
+{name:"Usman Tariq",role:"Investment Advisor",bio:"ROI, rental yield and exit planning for serious investors."},
+{name:"Hassan Ali",role:"Legal & Documentation",bio:"Title verification, NOCs and transfer — no shortcuts."},
+{name:"Zainab Khalid",role:"Customer Care",bio:"After-sale care, possession and handover, on the phone when you need her."},
+{name:"Omar Sheikh",role:"Head of Technology",bio:"Builds the tools, calculators and CRM that keep Aurevo honest."}];
+const ARTICLES=[
+{title:"How to read a payment plan without getting trapped",read:"6 min read",body:"A payment plan is not a discount, it is a promise in instalments. Start with three numbers: booking, down payment, and possession payment. If any of them is vague, ask for it in writing. Then check the quarterly amount against your monthly income, not your hope. A good plan leaves room for life — school fees, a car repair, a slow month. A bad plan looks cheap in month one and impossible in month twelve. At Aurevo, every plan shows booking, down payment, quarterly instalments and possession separately, so you can compare plans side by side before you sign. Never pay a booking amount without a receipt that names the property, the seller and the refund terms. That one page protects you more than any brochure."},
+{title:"Plots vs apartments: where ROI wins in 2026",read:"8 min read",body:"Plots win on appreciation when the location is right and dues are clear. Apartments win on rent from day one, especially in Clifton, Gulberg and E-11 where tenants are waiting. The mistake is to compare only price. Compare total cost: plot plus construction plus time, versus apartment plus maintenance plus vacancy. Then compare exit: a plot needs a buyer who wants to build, an apartment needs a tenant or a family who wants to move in now. In 2026, our data favours plots in DHA Phase 9 and Bahria Town for 5-year appreciation, and apartments in Clifton and F-7 for rental yield above 6 percent net. The best portfolio, for most families, is one of each — if the monthly plan allows it."},
+{title:"Documents to verify before buying in Pakistan",read:"5 min read",body:"Before you pay, verify five things. One, ownership: the seller on the file must match the seller in front of you. Two, dues: development charges, transfer fee and society dues must be clear, in writing. Three, possession: is the plot or unit actually handed over, or only promised? Four, NOC and approvals: especially for commercial and high-rise projects. Five, the payment schedule: every instalment, every date, every penalty for late payment, in the agreement, not in a WhatsApp message. Aurevo's legal team checks all five before a property is listed as verified. If a seller rushes you past any of them, walk away. A good deal waits for verification; a bad deal does not."}];
+const SEED_LEADS=[
+{name:"Ali Nawaz",phone:"0301-2345678",source:"Installment Calculator",stage:"New",note:"DHA Phase 6 house, 10yr plan, PKR 142,000/mo"},
+{name:"Fatima Zahra",phone:"0321-8765432",source:"Contact Form",stage:"Viewing",note:"3 bed Clifton apartment"},
+{name:"Hassan Raza",phone:"0333-1122334",source:"Affordability Checker",stage:"Contacted",note:"Max PKR 2.8 Crore, Lahore"},
+{name:"Ayesha Khan",phone:"0300-9988776",source:"ROI Tool",stage:"Negotiation",note:"Gulberg shop, yield 7.1%"},
+{name:"Usman Ghani",phone:"0345-5566778",source:"Contact Form",stage:"New",note:"Plot Bahria Town 5 Marla"},
+{name:"Sana Malik",phone:"0312-3456789",source:"Installment Calculator",stage:"Closed",note:"E-11 apartment, closed Mar 2026"},
+{name:"Bilal Ahmed",phone:"0308-1234567",source:"AI Assistant",stage:"Viewing",note:"House Lahore under 5 Crore"},
+{name:"Mariam Ali",phone:"0332-9876543",source:"Compare Plans",stage:"Contacted",note:"DHA Karachi apartment plans"},
+{name:"Omar Siddiqui",phone:"0322-4567890",source:"Contact Form",stage:"New",note:"Investment advisory, Islamabad"},
+{name:"Hira Shah",phone:"0301-7654321",source:"Stamp Duty Estimator",stage:"Negotiation",note:"F-7 house, tax planning"}];
+let favorites=new Set(LS("aurevo_favs")||[]), compareList=[], currentProp=null, currentTool="installment", adminLogged=false, langUR=false;
+let leads=LS("aurevo_leads"); if(!leads){leads=SEED_LEADS.map((l,i)=>({...l,id:i+1}));LS("aurevo_leads",leads)}
+let customProps=LS("aurevo_custom")||[]; PROPS=PROPS.concat(customProps);
+function allProps(){return PROPS}
+function saveFavs(){LS("aurevo_favs",[...favorites])}
+function toast(msg){const t=$("toast");t.textContent=msg;t.style.display="block";clearTimeout(toast._t);toast._t=setTimeout(()=>t.style.display="none",3200)}
+function vibrate(){try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}}
+function logActivity(txt){let a=LS("aurevo_activity")||[];a.unshift(new Date().toLocaleString()+" — "+txt);LS("aurevo_activity",a.slice(0,30))}
+function addLead(name,phone,source,note){const id=(leads.length?Math.max(...leads.map(l=>l.id)):0)+1;leads.unshift({id,name,phone,source,stage:"New",note:note||""});LS("aurevo_leads",leads);logActivity("New lead: "+name+" via "+source);return id}
+/* Navigation + header + cursor + preloader */
+const NAV=[["home","Home"],["properties","Explore"],["tools","Tools"],["about","About"],["services","Services"],["insights","Insights"],["contact","Contact"]];
+function renderNav(){ $("navLinks").innerHTML=NAV.map(([v,l])=>`<button onclick="showView('${v}')" data-nav="${v}">${l}</button>`).join(""); document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.t===currentView())) }
+function currentView(){return document.querySelector(".view.active")?.id.replace("view-","")||"home"}
+function showView(v){document.querySelectorAll(".view").forEach(s=>s.classList.remove("active"));const el=$("view-"+v);if(el)el.classList.add("active");document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b.dataset.nav===v));document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.t===v));window.scrollTo({top:0,behavior:"smooth"});vibrate();if(v==="properties")renderProperties();if(v==="favorites")renderFavorites();if(v==="compare")renderCompare();if(v==="tools")renderTools();if(v==="admin")renderAdmin();if(v==="about")renderAbout();if(v==="services")renderServices();if(v==="insights")renderInsights();if(v==="contact")renderContact()}
+function toggleLang(){langUR=!langUR;document.body.classList.toggle("light-urdu",langUR);document.documentElement.dir=langUR?"rtl":"ltr";$("langBtn").textContent=langUR?"UR / EN":"EN / UR";toast(langUR?"Urdu mode: core headings ab Urdu font aur RTL me dikhen ge.":"English mode restored.")}
+let lastScroll=0;window.addEventListener("scroll",()=>{const y=window.scrollY;const h=document.documentElement.scrollHeight-innerHeight;$("progress").style.width=(h>0?y/h*100:0)+"%";const hdr=$("siteHeader");hdr.classList.toggle("glass",y>80);hdr.classList.toggle("hide",y>lastScroll&&y>200);lastScroll=y},{passive:true});
+document.addEventListener("mousemove",e=>{const d=$("cursorDot"),r=$("cursorRing");d.style.transform=`translate(${e.clientX-4}px,${e.clientY-4}px)`;r.style.transform=`translate(${e.clientX-22}px,${e.clientY-22}px)`});
+document.addEventListener("mouseover",e=>{const t=e.target.closest("[data-cursor]");$("cursorLabel").textContent=t?t.dataset.cursor:"";const r=$("cursorRing");if(t){r.style.width="72px";r.style.height="72px"}else{r.style.width="44px";r.style.height="44px"}});
+window.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement.tagName!=="INPUT"){e.preventDefault();showView("properties");$("fSearch")?.focus()}if(e.key==="Escape"){closeModal("lightbox");closeModal("leadModal");closeModal("passportModal");closeModal("articleModal");closeAI()}});
+function heroSearch(){const c=$("heroCity").value,t=$("heroType").value,b=$("heroBudget").value;showView("properties");setTimeout(()=>{$("fCity").value=c;$("fType").value=t;if(b)$("fPrice").value=b;renderProperties()},50)}
+function priceToLife(){const budget=+$("ptlSlider").value;$("ptlPrice").textContent=fmtPKR(budget);const sorted=[...allProps()].filter(p=>p.price<=budget*1.4).sort((a,b)=>Math.abs(a.price-budget)-Math.abs(b.price-budget)).slice(0,3);const best=sorted[0];$("ptlSentence").textContent=best?`At ${fmtPKR(budget)} you can own ${best.marla?best.marla+" Marla ":""}${best.type.toLowerCase()} in ${best.area} for about ${fmtPKR(emiReducing(best.price*0.8,14,10))}/month.`:"At this budget, save a little more or explore plots in Bahria Town — our advisors can build a plan around you.";$("ptlCards").innerHTML=sorted.map(propCard).join("")||"<p class='muted'>No close matches yet. Try a higher budget.</p>"}
+function miniCalc(){const price=+$("miniPrice").value||0,down=+$("miniDown").value||0,tenure=+$("miniTenure").value||10;const loan=price*(1-down/100);const emi=emiReducing(loan,14,tenure);$("miniEmi").textContent=fmtPKR(emi)+"/month";$("miniNote").textContent=`Loan ${fmtPKR(loan)} • Down ${fmtPKR(price*down/100)} • ${tenure} years at 14% reducing balance.`}
+function propCard(p){const fav=favorites.has(p.id);const inCmp=compareList.includes(p.id);return `<article class="card" data-cursor="View"><div style="position:relative"><img src="${p.images[0]}" alt="${p.title}" loading="lazy" onclick="openDetail(${p.id})"><button class="heart ${fav?"on":""}" style="position:absolute;top:12px;right:12px" onclick="toggleFav(${p.id},this)" aria-label="Save property">${fav?"♥":"♡"}</button><span class="chip" style="position:absolute;left:12px;top:12px">${p.status}</span></div><div class="cardbody"><div class="price">${fmtPKR(p.price)}</div><h3 style="margin:8px 0;font-size:20px" onclick="openDetail(${p.id})" data-cursor="View">${p.title}</h3><p class="muted" style="font-size:14px">${p.area}, ${p.city} • ${p.marla?p.marla+" Marla • ": ""}${fmtNum(p.sqft)} sq ft${p.beds?` • ${p.beds} Bed • ${p.baths} Bath`:""}</p><p class="muted mono" style="font-size:13px">${fmtPKR(p.price/p.sqft)} / sq ft • Agent: ${p.agent}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" style="flex:1" onclick="openDetail(${p.id})">View Details</button><button class="btn ghost" onclick="toggleCompare(${p.id})">${inCmp?"Remove":"Compare"}</button></div></div></article>`}
+function toggleFav(id,btn){if(favorites.has(id)){favorites.delete(id)}else{favorites.add(id);vibrate()}saveFavs();if(btn)btn.classList.toggle("on",favorites.has(id));if(btn)btn.textContent=favorites.has(id)?"♥":"♡";renderProperties();toast(favorites.has(id)?"Saved to favorites.":"Removed from favorites.")}
+function toggleCompare(id){if(compareList.includes(id))compareList=compareList.filter(x=>x!==id);else{if(compareList.length>=3){toast("Compare tray is full (3). Remove one first.");return}compareList.push(id)}updateTray();renderProperties()}
+function updateTray(){const t=$("compareTray");t.style.display=compareList.length?"flex":"none";$("compareCount").textContent=`Compare (${compareList.length})`}
+function clearCompare(){compareList=[];updateTray();renderProperties()}
+let favOnly=false,viewMode="grid";
+function toggleFavOnly(){favOnly=!favOnly;$("favOnlyBtn").textContent=favOnly?"Saved only: On":"Saved only";renderProperties()}
+function toggleViewMode(){viewMode=viewMode==="grid"?"list":"grid";$("viewModeBtn").textContent="View: "+(viewMode==="grid"?"Grid":"List");renderProperties()}
+function renderProperties(){const q=($("fSearch").value||"").toLowerCase(),city=$("fCity").value,type=$("fType").value,status=$("fStatus").value,sort=$("fSort").value,max=+$("fPrice").value;$("fPriceLabel").textContent=max>=200000000?"Any":fmtPKR(max);let list=allProps().filter(p=>(!q||(p.title+" "+p.area+" "+p.city).toLowerCase().includes(q))&&(!city||p.city===city)&&(!type||p.type===type)&&(!status||p.status===status)&&p.price<=max&&(!favOnly||favorites.has(p.id)));if(sort==="low")list.sort((a,b)=>a.price-b.price);else if(sort==="high")list.sort((a,b)=>b.price-a.price);else if(sort==="size")list.sort((a,b)=>b.sqft-a.sqft);else list.sort((a,b)=>(b.featured-a.featured)||(a.price-b.price));const grid=$("propGrid");grid.className="grid cols3";if(viewMode==="list")grid.style.gridTemplateColumns="1fr";grid.innerHTML=list.map(propCard).join("");$("propEmpty").classList.toggle("hidden",list.length>0)}
+function renderHome(){const hr=new Date().getHours();let tint="day",note="Good afternoon — homes look best in daylight.";if(hr<6||hr>=21){tint="night";note="Night mode: windows glow, streets go quiet, prices stay honest."}else if(hr<10){tint="dawn";note="Dawn gold: the best light to imagine a new life."}else if(hr>=17){tint="dusk";note="Dusk amber: the hour when a house becomes a home."}$("heroTint").className="hero-tint "+tint;$("timeNote").textContent=note+" • Tint updates with your local time.";$("trustStats").innerHTML=[["250+","Projects delivered"],["4,800","Families housed"],["12M","Sq ft delivered"],["15 yrs","In Pakistan"]].map(([n,l])=>`<div class="stat"><b class="counter" data-n="${n.replace(/[^0-9]/g,"")}">${n}</b><span>${l}</span></div>`).join("");document.querySelectorAll(".counter").forEach(el=>{const target=+el.dataset.n;const suffix=el.textContent.replace(/[0-9,]+/,"");let cur=0;const iv=setInterval(()=>{cur+=Math.ceil(target/40);if(cur>=target){cur=target;clearInterval(iv)}el.textContent=cur.toLocaleString("en-PK")+suffix},30)});$("showcase").innerHTML=allProps().filter(p=>p.featured).slice(0,6).map((p,i)=>`<div class="card" style="min-width:300px"><div style="position:relative"><img src="${p.images[0]}" style="height:260px" alt="${p.title}"><span style="position:absolute;left:14px;bottom:12px;font-family:Fraunces,serif;font-size:56px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.6)">0${i+1}</span></div><div class="cardbody"><div class="price">${fmtPKR(p.price)}</div><h3 style="font-size:21px">${p.title}</h3><p class="muted">${p.area}, ${p.city}</p><button class="btn" onclick="openDetail(${p.id})">View Property</button></div></div>`).join("");$("whyCards").innerHTML=[["Verified Titles","Every title, NOC and due checked by our legal team before listing. No surprises after booking."],["Transparent Pricing","Price, price per sq ft, and every instalment in writing. What you see is what you pay."],["Flexible Plans","Booking, down payment, quarterly and possession — built around your income, not ours."],["After-Sale Care","Possession, handover and fixes after you move in. We stay after the sale, not just until it."]].map(([t,d])=>`<div class="card tilt" style="padding:22px"><h3>${t}</h3><p class="muted">${d}</p></div>`).join("");document.querySelectorAll(".tilt").forEach(card=>{card.addEventListener("mousemove",e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg)`});card.addEventListener("mouseleave",()=>card.style.transform="")});$("testimonials").innerHTML=TESTIMONIALS.map(t=>`<div class="card" style="min-width:300px;padding:22px"><img src="${t.img}" style="height:150px;border-radius:14px" alt=""><p style="font-style:italic;margin-top:14px">"${t.text}"</p><b>${t.name}</b><div class="muted">${t.place}</div></div>`).join("");$("insightCards").innerHTML=ARTICLES.map((a,i)=>`<div class="card lightcard" style="padding:20px"><p class="eyebrow">${a.read}</p><h3>${a.title}</h3><button class="btn dark" onclick="openArticle(${i})">Read Article</button></div>`).join("");priceToLife();miniCalc()}
+function renderStepper(){$("stepper").innerHTML=[["1. Budget First","Know your monthly number before you fall in love. Use the calculator, not hope."],["2. Area, Not Just House","Schools, commute, hospitals and resale — check the Life Score on every property."],["3. Legal Check","Title, dues, NOC and possession — verified in writing by our legal team."],["4. Payment Plan","Booking, down, quarterly, possession. Every date in the agreement, not in a message."],["5. Possession & Keys","Handover checklist, snagging and after-sale care. We stay after you move in."]].map(([t,d],i)=>`<div class="card lightcard" style="padding:18px;margin-bottom:12px;display:flex;gap:16px;align-items:flex-start"><b style="font-family:Fraunces,serif;font-size:30px;color:#7a5c1e">0${i+1}</b><div><b>${t}</b><p class="muted" style="margin:4px 0">${d}</p></div></div>`).join("")}
+function openArticle(i){const a=ARTICLES[i];$("articleBox").innerHTML=`<div style="display:flex;justify-content:space-between"><h2 style="margin:0">${a.title}</h2><button class="btn ghost" onclick="closeModal('articleModal')">Close</button></div><p class="muted">${a.read} • Aurevo Insights</p><p style="font-size:17px;line-height:1.8">${a.body}</p><p style="font-size:17px;line-height:1.8">If this helped, run the numbers for your own budget in Tools, then book a free advisor call. A plan you can check is always better than a promise you cannot.</p><button class="btn" onclick="closeModal('articleModal');showView('tools')">Open Tools</button>`;$("articleModal").classList.add("open")}
+function closeModal(id){$(id).classList.remove("open")}
+function subscribeNews(){const e=$("newsEmail").value;if(!e.includes("@")){toast("Please enter a valid email.");return}addLead("Newsletter subscriber",e,"Newsletter","Market updates");toast("Subscribed. Market updates, no spam.")}
+function saveSearch(){LS("aurevo_saved_search",{city:$("fCity").value,type:$("fType").value,max:$("fPrice").value});toast("Search saved. We will show it first next time.")}
+/* Detail */
+let lbImages=[],lbIndex=0,nightMode=false;
+function openDetail(id){const p=allProps().find(x=>x.id===id);if(!p)return;currentProp=p;lbImages=p.images;lbIndex=0;nightMode=false;const fav=favorites.has(p.id);const q=p.plan;const booking=p.price*q.booking/100,down=p.price*q.down/100,quarterTotal=p.price*(100-q.booking-q.down-q.possession)/100,poss=p.price*q.possession/100;$("detailWrap").innerHTML=`
+<button class="btn ghost" onclick="showView('properties')">← Back to Properties</button>
+<div class="grid cols2" style="margin-top:16px">
+<div>
+<img id="detailMain" src="${p.images[0]}" style="width:100%;height:420px;object-fit:cover;border-radius:24px;cursor:zoom-in" onclick="openLightbox(0)" alt="${p.title}">
+<div style="display:flex;gap:10px;margin-top:10px">${p.images.map((im,i)=>`<img src="${im}" style="width:90px;height:64px;object-fit:cover;border-radius:12px;cursor:pointer;border:2px solid ${i===0?"var(--gold)":"transparent"}" onclick="setDetailImg(${i},this)">`).join("")}</div>
+<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap"><button class="btn ghost" onclick="toggleNight()">Day / Night View</button><button class="btn ghost" onclick="openLightbox(0)">Fullscreen Gallery</button><button class="btn ghost" onclick="toggleFav(${p.id});openDetail(${p.id})">${fav?"Saved ♥":"Save to Favorites ♡"}</button></div>
+<div style="margin-top:20px"><p class="eyebrow">Video / Virtual Tour</p><div style="background:#0B2F26;border-radius:20px;padding:26px;text-align:center"><b>Virtual tour available on request</b><p class="muted">Ask your advisor for a live video walkthrough on WhatsApp — same day, no visit needed to shortlist.</p><button class="btn" onclick="aiWhatsApp()">Request Video Tour on WhatsApp</button></div></div>
+<div style="margin-top:20px"><p class="eyebrow">Life Score</p><div style="display:flex;gap:14px;flex-wrap:wrap">${Object.entries(p.life).map(([k,v])=>`<div style="text-align:center"><svg class="gauge" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="9"/><circle cx="50" cy="50" r="42" fill="none" stroke="#C9A96A" stroke-width="9" stroke-dasharray="${v*2.64} 264" stroke-linecap="round" transform="rotate(-90 50 50)"/><text x="50" y="55" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${v}</text></svg><div style="font-size:12px;text-transform:capitalize">${k}</div></div>`).join("")}</div></div>
+</div>
+<div>
+<p class="eyebrow">${p.city} • ${p.area}</p>
+<h2 style="margin-top:6px">${p.title}</h2>
+<div class="price" style="font-size:36px">${fmtPKR(p.price)}</div>
+<p class="muted mono">${fmtPKR(p.price/p.sqft)} / sq ft • ${p.marla?p.marla+" Marla • ": ""}${fmtNum(p.sqft)} sq ft • Agent: ${p.agent}</p>
+<p>${p.desc}</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">${p.amenities.map(a=>`<span class="chip">${a}</span>`).join("")}</div>
+<div class="grid cols2" style="margin-top:18px">
+<div class="card" style="padding:16px"><b>Beds</b><div>${p.beds||"—"}</div></div>
+<div class="card" style="padding:16px"><b>Baths</b><div>${p.baths||"—"}</div></div>
+<div class="card" style="padding:16px"><b>Status</b><div>${p.status}</div></div>
+<div class="card" style="padding:16px"><b>Type</b><div>${p.type}</div></div>
+</div>
+<div class="card" style="padding:20px;margin-top:16px">
+<h3 style="margin-top:0">Payment Plan</h3>
+<table><tr><th>Stage</th><th>Share</th><th>Amount</th></tr>
+<tr><td>Booking</td><td>${q.booking}%</td><td>${fmtPKR(booking)}</td></tr>
+<tr><td>Down Payment</td><td>${q.down}%</td><td>${fmtPKR(down)}</td></tr>
+<tr><td>Quarterly Instalments</td><td>${100-q.booking-q.down-q.possession}%</td><td>${fmtPKR(quarterTotal)} total</td></tr>
+<tr><td>On Possession</td><td>${q.possession}%</td><td>${fmtPKR(poss)}</td></tr></table>
+<p class="muted" style="font-size:13px">Quarterly amount (if split over ${q.quarterly} quarters): <b>${fmtPKR(quarterTotal/Math.max(1,q.quarterly))}</b></p>
+</div>
+<div class="card" style="padding:20px;margin-top:16px">
+<h3 style="margin-top:0">Floor Plans</h3>
+<div class="tabs"><button class="tab on" onclick="floorTab(this,'Ground Floor — living, kitchen, guest room, 2 beds')">Ground</button><button class="tab" onclick="floorTab(this,'First Floor — family lounge, 3 beds, terrace')">First</button><button class="tab" onclick="floorTab(this,'Roof / Terrace — laundry, store, open terrace')">Roof</button></div>
+<p id="floorText" style="margin-top:12px">Ground Floor — living, kitchen, guest room, 2 beds</p>
+<svg viewBox="0 0 400 220" style="width:100%;background:#0d1426;border-radius:14px"><rect x="20" y="20" width="170" height="80" fill="none" stroke="#C9A96A"/><text x="105" y="65" fill="#fff" text-anchor="middle">Living</text><rect x="210" y="20" width="170" height="80" fill="none" stroke="#C9A96A"/><text x="295" y="65" fill="#fff" text-anchor="middle">Kitchen</text><rect x="20" y="120" width="170" height="80" fill="none" stroke="#C9A96A"/><text x="105" y="165" fill="#fff" text-anchor="middle">Bed 1</text><rect x="210" y="120" width="170" height="80" fill="none" stroke="#C9A96A"/><text x="295" y="165" fill="#fff" text-anchor="middle">Bed 2</text></svg>
+</div>
+<div class="stickycta" style="border-radius:16px;margin-top:16px">
+<button class="btn" style="flex:1" onclick="openLead('Book Viewing',${p.id})">Book Viewing</button>
+<a class="btn ghost" style="flex:1;text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://wa.me/447585438180?text=${encodeURIComponent("Hi Aurevo, I want to view "+p.title+" ("+fmtPKR(p.price)+")")}">WhatsApp</a>
+<button class="btn ghost" onclick="calcForProperty(${p.id})">Calculate Installment</button>
+</div>
+<div class="card" style="padding:20px;margin-top:16px">
+<h3 style="margin-top:0">Installment for this property</h3>
+<label>Down %</label><input class="field mono" type="number" id="detailDown" value="20" oninput="detailCalc()">
+<label>Tenure (years)</label><input class="field mono" type="number" id="detailTenure" value="10" oninput="detailCalc()">
+<div class="mono" style="font-size:30px;color:var(--softgold);margin-top:10px" id="detailEmi">—</div>
+<button class="btn" style="margin-top:10px" onclick="openLead('Download Brochure',${p.id})">Download Brochure (Lead-Gated)</button>
+</div>
+</div>
+</div>
+<div style="margin-top:30px"><h3>Similar Properties</h3><div class="grid cols3">${allProps().filter(x=>x.city===p.city&&x.id!==p.id).slice(0,3).map(propCard).join("")}</div></div>`;
+showView("detail");detailCalc();const ld={ "@context":"https://schema.org","@type":"RealEstateListing","name":p.title,"offers":{"@type":"Offer","price":p.price,"priceCurrency":"PKR"},"address":{"@type":"PostalAddress","addressLocality":p.city}};$("jsonld").textContent=JSON.stringify(ld)}
+function setDetailImg(i,el){$("detailMain").src=lbImages[i];lbIndex=i;el.parentElement.querySelectorAll("img").forEach(x=>x.style.borderColor="transparent");el.style.borderColor="var(--gold)"}
+function toggleNight(){nightMode=!nightMode;$("detailMain").classList.toggle("nightimg",nightMode);toast(nightMode?"Night view: dusk filter with glowing windows feel.":"Day view restored.")}
+function openLightbox(i){lbIndex=i;$("lbImg").src=lbImages[i];$("lbTitle").textContent=currentProp?currentProp.title:"Gallery";$("lbCount").textContent=(i+1)+" / "+lbImages.length;$("lightbox").classList.add("open")}
+function lbNav(d){lbIndex=(lbIndex+d+lbImages.length)%lbImages.length;$("lbImg").src=lbImages[lbIndex];$("lbCount").textContent=(lbIndex+1)+" / "+lbImages.length}
+function floorTab(btn,txt){btn.parentElement.querySelectorAll(".tab").forEach(b=>b.classList.remove("on"));btn.classList.add("on");$("floorText").textContent=txt}
+function detailCalc(){if(!currentProp)return;const down=+$("detailDown").value||20,tenure=+$("detailTenure").value||10;const loan=currentProp.price*(1-down/100);$("detailEmi").textContent=fmtPKR(emiReducing(loan,14,tenure))+"/month";}
+function calcForProperty(id){showView("tools");currentTool="installment";renderTools();const p=allProps().find(x=>x.id===id);if(p)setTimeout(()=>{$("toolPrice").value=p.price;$("toolProp").value=p.id;renderInstallment()},50)}
+function renderFavorites(){const list=allProps().filter(p=>favorites.has(p.id));$("favWrap").innerHTML=`<p class="eyebrow">Saved</p><h2>Your Saved Homes</h2>${list.length?`<div class="grid cols3">${list.map(propCard).join("")}</div>`:"<p class='muted'>No saved homes yet. Tap the heart on any property to save it here.</p>"}`}
+function renderCompare(){if(compareList.length<2){$("compareWrap").innerHTML=`<h2>Compare Properties</h2><p class="muted">Add at least 2 properties to Compare from the Explore page. You can compare up to 3.</p><button class="btn" onclick="showView('properties')">Explore Properties</button>`;return}const list=compareList.map(id=>allProps().find(p=>p.id===id)).filter(Boolean);const bestPrice=Math.min(...list.map(p=>p.price/p.sqft)),mostBeds=Math.max(...list.map(p=>p.beds));$("compareWrap").innerHTML=`<h2>Side-by-Side Compare</h2><div style="overflow:auto"><table><tr><th>Field</th>${list.map(p=>`<th>${p.title}</th>`).join("")}</tr>
+<tr><td>Price</td>${list.map(p=>`<td><b>${fmtPKR(p.price)}</b></td>`).join("")}</tr>
+<tr><td>Price / sq ft ${" "}</td>${list.map(p=>`<td style="${p.price/p.sqft===bestPrice?"background:rgba(201,169,106,.25);font-weight:800":""}">${fmtPKR(p.price/p.sqft)}${p.price/p.sqft===bestPrice?" — Best":""}</td>`).join("")}</tr>
+<tr><td>Size</td>${list.map(p=>`<td>${p.marla?p.marla+" Marla • ": ""}${fmtNum(p.sqft)} sq ft</td>`).join("")}</tr>
+<tr><td>Beds / Baths</td>${list.map(p=>`<td style="${p.beds===mostBeds&&mostBeds>0?"background:rgba(201,169,106,.25);font-weight:800":""}">${p.beds||"—"} / ${p.baths||"—"}</td>`).join("")}</tr>
+<tr><td>City / Area</td>${list.map(p=>`<td>${p.city} • ${p.area}</td>`).join("")}</tr>
+<tr><td>Status</td>${list.map(p=>`<td>${p.status}</td>`).join("")}</tr>
+<tr><td></td>${list.map(p=>`<td><button class="btn" onclick="openDetail(${p.id})">View</button></td>`).join("")}</tr></table></div><p class="muted" style="margin-top:12px">Best price per sq ft is highlighted. Lowest is not always best — check Life Score and payment plan on the detail page before you decide.</p>`}
+function openLead(source,propId){const p=propId?allProps().find(x=>x.id===propId):null;$("leadModalBox").innerHTML=`<div style="display:flex;justify-content:space-between"><h3 style="margin:0">${source}</h3><button class="btn ghost" onclick="closeModal('leadModal')">Close</button></div><p class="muted">${p?p.title:"Aurevo advisor"} — an advisor will call you within 30 minutes.</p><label>Full name</label><input class="field" id="leadName" placeholder="Your name"><label>Phone (PK format, e.g. 0301-2345678)</label><input class="field" id="leadPhone" placeholder="03xx-xxxxxxx"><label>Message</label><textarea class="field" id="leadMsg" rows="3" placeholder="Preferred time, questions…"></textarea><div style="position:absolute;left:-9999px"><input id="leadHoney" tabindex="-1" autocomplete="off"></div><button class="btn" style="margin-top:14px;width:100%" onclick="submitLead('${source}',${propId||"null"})">Send Request</button>`;$("leadModal").classList.add("open")}
+function submitLead(source,propId){const name=$("leadName").value.trim(),phone=$("leadPhone").value.trim();if($("leadHoney").value){closeModal("leadModal");return}if(!name||!/^03\d{2}-?\d{7}$/.test(phone.replace(/\s/g,""))){toast("Please enter your name and a valid PK phone (03xx-xxxxxxx).");return}const p=propId?allProps().find(x=>x.id===propId):null;addLead(name,phone,source,(p?p.title+" • ":"")+($("leadMsg").value||""));closeModal("leadModal");toast("Request sent. Gold check: an advisor will call you within 30 minutes.");confettiGold()}
+function confettiGold(){for(let i=0;i<40;i++){const s=document.createElement("div");s.style.cssText=`position:fixed;left:${50+Math.random()*20-10}%;top:40%;width:8px;height:8px;background:${i%2?"#C9A96A":"#E4D2A5"};z-index:600;border-radius:50%;pointer-events:none`;document.body.appendChild(s);const dx=(Math.random()-.5)*400,dy=-(Math.random()*300);s.animate([{transform:"translate(0,0)",opacity:1},{transform:`translate(${dx}px,${dy+400}px)`,opacity:0}],{duration:1400+Math.random()*800,easing:"ease-out"}).onfinish=()=>s.remove()}}
+/* Tools */
+const TOOL_TABS=[["installment","Installment Calculator"],["affordability","Affordability"],["roi","ROI & Yield"],["plans","Compare Plans"],["area","Area Converter"],["stamp","Stamp Duty"],["crm","Mini CRM (Leads)"]];
+function renderTools(){$("toolTabs").innerHTML=TOOL_TABS.map(([k,l])=>`<button class="tab ${currentTool===k?"on":""}" onclick="currentTool='${k}';renderTools()">${l}</button>`).join("");const b=$("toolBody");if(currentTool==="installment")b.innerHTML=toolInstallmentHTML();else if(currentTool==="affordability")b.innerHTML=toolAffordHTML();else if(currentTool==="roi")b.innerHTML=toolRoiHTML();else if(currentTool==="plans")b.innerHTML=toolPlansHTML();else if(currentTool==="area")b.innerHTML=toolAreaHTML();else if(currentTool==="stamp")b.innerHTML=toolStampHTML();else b.innerHTML=toolCrmHTML();if(currentTool==="installment")renderInstallment();if(currentTool==="affordability")renderAfford();if(currentTool==="roi")renderRoi();if(currentTool==="plans")renderPlans();if(currentTool==="area")renderArea();if(currentTool==="stamp")renderStamp();if(currentTool==="crm")renderCrm()}
+function toolInstallmentHTML(){return `<div class="grid cols2"><div class="card" style="padding:22px">
+<label>Property (or type a price)</label><select class="field" id="toolProp" onchange="toolPropChange()"><option value="">Custom price</option>${allProps().map(p=>`<option value="${p.id}">${p.title} — ${fmtPKR(p.price)}</option>`).join("")}</select>
+<label>Property price (PKR)</label><input class="field mono" type="number" id="toolPrice" value="35000000" oninput="renderInstallment()">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div><label>Down payment %</label><input class="field mono" type="number" id="toolDownPct" value="20" oninput="syncDown('pct')"></div>
+<div><label>Down payment amount</label><input class="field mono" type="number" id="toolDownAmt" value="7000000" oninput="syncDown('amt')"></div>
+<div><label>Tenure (years, 1-25)</label><input type="range" min="1" max="25" value="10" id="toolTenure" oninput="$('toolTenureLabel').textContent=this.value+' years';renderInstallment()"><span class="mono" id="toolTenureLabel">10 years</span></div>
+<div><label>Rate % per annum</label><input class="field mono" type="number" id="toolRate" value="14" step="0.5" oninput="renderInstallment()"></div>
+</div>
+<label>Method</label><div class="tabs"><button class="tab on" id="methodReducing" onclick="setMethod('reducing')">Reducing Balance EMI</button><button class="tab" id="methodFlat" onclick="setMethod('flat')">Flat-Rate Markup</button></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div><label>Booking amount (PKR, optional)</label><input class="field mono" type="number" id="toolBooking" value="0" oninput="renderInstallment()"></div>
+<div><label>Processing fee (PKR)</label><input class="field mono" type="number" id="toolFee" value="50000" oninput="renderInstallment()"></div>
+<div><label>Possession %</label><input class="field mono" type="number" id="toolPossPct" value="10" oninput="renderInstallment()"></div>
+<div><label>Possession month</label><input class="field mono" type="number" id="toolPossMonth" value="24" oninput="renderInstallment()"></div>
+</div>
+<button class="btn" style="margin-top:16px;width:100%" onclick="openPassport()">Generate Plan Passport</button>
+<button class="btn ghost" style="margin-top:8px;width:100%" onclick="openLead('Installment Plan',null)">Get This Plan From an Advisor</button>
+</div><div><div class="card" style="padding:22px"><span class="muted">Monthly installment</span><div class="mono" style="font-size:40px;font-weight:700;color:var(--softgold)" id="instEmi">—</div><div class="grid cols2" style="margin-top:12px"><div><b>Total Payable</b><div class="mono" id="instTotal">—</div></div><div><b>Total Markup</b><div class="mono" id="instMarkup">—</div></div><div><b>Loan Amount</b><div class="mono" id="instLoan">—</div></div><div><b>Down Payment</b><div class="mono" id="instDown">—</div></div></div><div id="instDonut" style="margin-top:16px"></div><p class="muted" id="instWhatif"></p></div>
+<div class="card" style="padding:22px;margin-top:14px"><h3 style="margin-top:0">Balance Over Time</h3><div id="instChart"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn ghost" onclick="exportAmortCSV()">Export Amortization CSV</button><button class="btn ghost" onclick="amortPage(-1)">Previous 12</button><button class="btn ghost" onclick="amortPage(1)">Next 12</button><span class="muted" id="amortPageLabel"></span></div>
+<div style="overflow:auto;max-height:340px;margin-top:12px"><table><thead style="position:sticky;top:0;background:#0B2F26"><tr><th>Month</th><th>EMI</th><th>Principal</th><th>Markup</th><th>Balance</th></tr></thead><tbody id="amortBody"></tbody></table></div></div></div></div>`}
+let toolMethod="reducing",amortOffset=0,lastAmort=null;
+function setMethod(m){toolMethod=m;$("methodReducing").classList.toggle("on",m==="reducing");$("methodFlat").classList.toggle("on",m==="flat");renderInstallment()}
+function toolPropChange(){const id=+$("toolProp").value;if(id){const p=allProps().find(x=>x.id===id);if(p)$("toolPrice").value=p.price}renderInstallment()}
+function syncDown(which){const price=+$("toolPrice").value||0;if(which==="pct"){const pct=+$("toolDownPct").value||0;$("toolDownAmt").value=Math.round(price*pct/100)}else{const amt=+$("toolDownAmt").value||0;$("toolDownPct").value=price?Math.round(amt/price*100):0}renderInstallment()}
+function donutSVG(principal,markup,fees){const total=Math.max(1,principal+markup+fees);const segs=[[principal,"#00e5c0"],[markup,"#C9A96A"],[fees,"#4d7cff"]];let off=0;const circles=segs.map(([v,c])=>{const dash=v/total*251;const s=`<circle cx="60" cy="60" r="40" fill="none" stroke="${c}" stroke-width="18" stroke-dasharray="${dash} 251" stroke-dashoffset="${-off}" transform="rotate(-90 60 60)"/>`;off+=dash;return s}).join("");return `<svg viewBox="0 0 120 120" style="width:160px">${circles}</svg><div class="muted" style="font-size:13px">Teal: Principal • Gold: Markup • Blue: Fees</div>`}
+function lineChartSVG(points,w,h){if(!points.length)return "";const max=Math.max(...points);const stepX=w/(points.length-1);let d="";points.forEach((v,i)=>{const x=i*stepX,y=h-(v/max*h);d+=(i?"L":"M")+x.toFixed(1)+" "+y.toFixed(1)+" "});return `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:180px;background:#0d1426;border-radius:14px"><path d="${d}" fill="none" stroke="#C9A96A" stroke-width="3"/><path d="${d} L ${w} ${h} L 0 ${h} Z" fill="rgba(201,169,106,.15)" stroke="none"/></svg>`}
+function renderInstallment(){const price=+$("toolPrice").value||0,down=+$("toolDownAmt").value||0,tenure=+$("toolTenure").value||10,rate=+$("toolRate").value||0,fee=+$("toolFee").value||0,booking=+$("toolBooking").value||0;const loan=Math.max(0,price-down);const res=amortization(loan,rate,tenure,toolMethod);lastAmort={price,down,tenure,rate,fee,booking,loan,res};const totalPay=down+fee+booking+res.emi*res.rows.length;const markup=Math.max(0,res.emi*res.rows.length-loan);$("instEmi").textContent=fmtPKR(res.emi)+"/month";$("instTotal").textContent=fmtPKR(totalPay);$("instMarkup").textContent=fmtPKR(markup);$("instLoan").textContent=fmtPKR(loan);$("instDown").textContent=fmtPKR(down);$("instDonut").innerHTML=donutSVG(loan,markup,fee);const altDown=Math.min(price,down+price*0.05);const altLoan=Math.max(0,price-altDown);const altEmi=toolMethod==="flat"?emiFlat(altLoan,rate,tenure):emiReducing(altLoan,rate,tenure);const save=Math.max(0,(res.emi-altEmi)*res.rows.length);$("instWhatif").textContent=`What-if: Pay 5% more down (${fmtPKR(altDown)}) and save about ${fmtPKR(save)} over the tenure.`;$("instChart").innerHTML=lineChartSVG(res.rows.filter((_,i)=>i%6===0).map(r=>r.balance),600,180);renderAmortPage()}
+function renderAmortPage(){if(!lastAmort)return;const rows=lastAmort.res.rows.slice(amortOffset,amortOffset+12);$("amortBody").innerHTML=rows.map(r=>`<tr><td>${r.m}</td><td>${fmtPKR(r.emi)}</td><td>${fmtPKR(r.principal)}</td><td>${fmtPKR(r.interest)}</td><td>${fmtPKR(r.balance)}</td></tr>`).join("");$("amortPageLabel").textContent=`Showing ${amortOffset+1}-${Math.min(amortOffset+12,lastAmort.res.rows.length)} of ${lastAmort.res.rows.length} months`}
+function amortPage(d){if(!lastAmort)return;amortOffset=clamp(amortOffset+d*12,0,Math.max(0,lastAmort.res.rows.length-12));renderAmortPage()}
+function exportAmortCSV(){if(!lastAmort)return;const csv="Month,EMI,Principal,Markup,Balance\n"+lastAmort.res.rows.map(r=>[r.m,Math.round(r.emi),Math.round(r.principal),Math.round(r.interest),Math.round(r.balance)].join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="aurevo-amortization.csv";a.click();toast("Amortization CSV downloaded.")}
+function openPassport(){if(!lastAmort){toast("Calculate a plan first.");return}const p=allProps().find(x=>x.id===+$("toolProp").value);const title=p?p.title:"Custom Property";const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="+encodeURIComponent(window.location.href+"?plan="+encodeURIComponent(title));$("passportBox").innerHTML=`<div style="display:flex;justify-content:space-between"><h3 style="margin:0">Plan Passport</h3><button class="btn ghost" onclick="closeModal('passportModal')">Close</button></div><div style="background:linear-gradient(135deg,#F6F1E7,#E4D2A5);color:#121212;border-radius:18px;padding:22px;margin-top:14px;display:grid;grid-template-columns:1fr auto;gap:16px"><div><b style="letter-spacing:.12em">AUREVO • PLAN PASSPORT</b><h3 style="margin:8px 0">${title}</h3><p>Down Payment: <b>${fmtPKR(lastAmort.down)}</b><br>Monthly: <b>${fmtPKR(lastAmort.res.emi)}</b><br>Tenure: <b>${lastAmort.tenure} years</b> • Rate: <b>${lastAmort.rate}%</b><br>Total Payable: <b>${fmtPKR(lastAmort.down+lastAmort.fee+lastAmort.res.emi*lastAmort.res.rows.length)}</b></p><p style="font-size:12px">Share this plan with family or an advisor. Prices in PKR.</p></div><img src="${qrUrl}" style="width:140px;height:140px;border-radius:12px;background:#fff" alt="QR code for plan link"></div><div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap"><button class="btn" onclick="passportWhatsApp()">Send via WhatsApp</button><button class="btn ghost" onclick="downloadPassportPNG()">Download PNG</button><button class="btn ghost" onclick="copyPlanLink()">Copy Plan Link</button></div>`;$("passportModal").classList.add("open")}
+function passportWhatsApp(){window.open("https://wa.me/447585438180?text="+encodeURIComponent("Hi Aurevo, here is my plan: Monthly "+fmtPKR(lastAmort.res.emi)+", Down "+fmtPKR(lastAmort.down)+", Tenure "+lastAmort.tenure+" years."),"_blank")}
+function copyPlanLink(){const url=window.location.href.split("?")[0]+"?plan="+encodeURIComponent("Monthly "+fmtPKR(lastAmort.res.emi)+" • Down "+fmtPKR(lastAmort.down));navigator.clipboard?.writeText(url).then(()=>toast("Plan link copied."));}
+function downloadPassportPNG(){try{const c=document.createElement("canvas");c.width=1080;c.height=640;const g=c.getContext("2d");g.fillStyle="#F6F1E7";g.fillRect(0,0,1080,640);g.fillStyle="#06201A";g.fillRect(0,0,1080,110);g.fillStyle="#E4D2A5";g.font="900 44px Georgia";g.fillText("AUREVO  •  PLAN PASSPORT",40,72);g.fillStyle="#121212";g.font="700 36px Georgia";g.fillText("Monthly: "+fmtPKR(lastAmort.res.emi),40,200);g.font="500 30px system-ui";g.fillText("Down Payment: "+fmtPKR(lastAmort.down),40,260);g.fillText("Tenure: "+lastAmort.tenure+" years  •  Rate: "+lastAmort.rate+"%",40,320);g.fillText("Total Payable: "+fmtPKR(lastAmort.down+lastAmort.fee+lastAmort.res.emi*lastAmort.res.rows.length),40,380);g.fillStyle="#7a5c1e";g.font="500 24px system-ui";g.fillText("Own the life you imagined.  •  aurevo",40,560);c.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="aurevo-plan-passport.png";a.click();toast("Plan Passport PNG downloaded.")})}catch(e){toast("PNG download failed in this browser.")}}
+function toolAffordHTML(){return `<div class="grid cols2"><div class="card" style="padding:22px"><label>Monthly income (PKR)</label><input class="field mono" type="number" id="afIncome" value="400000" oninput="renderAfford()"><label>Other EMIs / month</label><input class="field mono" type="number" id="afEmis" value="30000" oninput="renderAfford()"><label>Monthly expenses</label><input class="field mono" type="number" id="afExp" value="150000" oninput="renderAfford()"><label>Savings for down payment</label><input class="field mono" type="number" id="afSave" value="7000000" oninput="renderAfford()"><label>Tenure (years)</label><input class="field mono" type="number" id="afTenure" value="15" oninput="renderAfford()"></div><div class="card" style="padding:22px"><span class="muted">Maximum affordable price</span><div class="mono" style="font-size:36px;color:var(--softgold)" id="afMax">—</div><p class="muted" id="afNote"></p><div id="afGauge"></div><h3>Matching Properties</h3><div id="afMatches"></div><button class="btn" style="margin-top:12px" onclick="openLead('Affordability Plan',null)">Get This Plan From an Advisor</button></div></div>`}
+function renderAfford(){const inc=+$("afIncome").value||0,emis=+$("afEmis").value||0,exp=+$("afExp").value||0,save=+$("afSave").value||0,tenure=+$("afTenure").value||15;const avail=Math.max(0,inc-emis-exp);const comfortable=avail*0.35,stretch=avail*0.45;const maxLoan=comfortable*tenure*12/1.8;const maxPrice=save+maxLoan;$("afMax").textContent=fmtPKR(maxPrice);$("afNote").textContent=`Comfortable EMI: ${fmtPKR(comfortable)}/month • Stretch EMI: ${fmtPKR(stretch)}/month • Available after expenses: ${fmtPKR(avail)}/month.`;$("afGauge").innerHTML=`<div style="height:14px;background:#1a2240;border-radius:99px;overflow:hidden;display:flex"><i style="display:block;width:60%;background:#00e5c0"></i><i style="display:block;width:40%;background:#f5b942"></i></div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--mist)"><span>Comfortable zone</span><span>Stretch zone</span></div>`;$("afMatches").innerHTML=allProps().filter(p=>p.price<=maxPrice).slice(0,4).map(p=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>${p.title}</span><b>${fmtPKR(p.price)}</b><button class="btn ghost" onclick="openDetail(${p.id})">View</button></div>`).join("")||"<p class='muted'>No matches at this budget yet. Increase tenure or savings, or talk to an advisor about plots.</p>"}
+function toolRoiHTML(){return `<div class="grid cols2"><div class="card" style="padding:22px"><label>Purchase price</label><input class="field mono" type="number" id="roiPrice" value="35000000" oninput="renderRoi()"><label>Monthly rent</label><input class="field mono" type="number" id="roiRent" value="180000" oninput="renderRoi()"><label>Vacancy %</label><input class="field mono" type="number" id="roiVac" value="5" oninput="renderRoi()"><label>Maintenance / year</label><input class="field mono" type="number" id="roiMaint" value="120000" oninput="renderRoi()"><label>Appreciation % / year</label><input class="field mono" type="number" id="roiApp" value="8" oninput="renderRoi()"></div><div class="card" style="padding:22px"><div class="grid cols2"><div><b>Gross Yield</b><div class="mono" id="roiGross">—</div></div><div><b>Net Yield</b><div class="mono" id="roiNet">—</div></div><div><b>5-Year Value</b><div class="mono" id="roi5">—</div></div><div><b>Break-Even</b><div class="mono" id="roiBreak">—</div></div></div><div id="roiChart" style="margin-top:14px"></div><button class="btn" style="margin-top:12px" onclick="openLead('ROI Plan',null)">Get This Plan From an Advisor</button></div></div>`}
+function renderRoi(){const price=+$("roiPrice").value||1,rent=+$("roiRent").value||0,vac=+$("roiVac").value||0,maint=+$("roiMaint").value||0,app=+$("roiApp").value||0;const gross=rent*12/price*100;const net=(rent*12*(1-vac/100)-maint)/price*100;$("roiGross").textContent=gross.toFixed(2)+"%";$("roiNet").textContent=net.toFixed(2)+"%";$("roi5").textContent=fmtPKR(price*Math.pow(1+app/100,5));let be="Beyond 15 years";let cum=-price;for(let y=1;y<=15;y++){cum+=rent*12*(1-vac/100)-maint;if(cum>=0){be="Year "+y;break}}$("roiBreak").textContent=be;const pts=[];for(let y=0;y<=15;y++)pts.push(price*Math.pow(1+app/100,y)/1000000);$("roiChart").innerHTML=lineChartSVG(pts,600,180)+"<p class='muted'>Projection: property value in PKR millions over 15 years at "+app+"% appreciation.</p>"}
+function toolPlansHTML(){return `<div class="card" style="padding:22px"><h3 style="margin-top:0">Compare Three Payment Plans</h3><p class="muted">Same property, three plans. The winner is highlighted by total payable, not by the smallest monthly figure.</p><div id="plansBody"></div><button class="btn" style="margin-top:14px" onclick="openLead('Compare Plans',null)">Get The Winning Plan From an Advisor</button></div>`}
+function renderPlans(){const price=35000000;const plans=[{name:"Plan A — Low Down",down:10,tenure:15,rate:14},{name:"Plan B — Balanced",down:20,tenure:10,rate:14},{name:"Plan C — Short & Strong",down:30,tenure:7,rate:13}];const rows=plans.map(pl=>{const loan=price*(1-pl.down/100);const emi=emiReducing(loan,pl.rate,pl.tenure);const total=price*pl.down/100+emi*pl.tenure*12;return {...pl,emi,total}});const best=Math.min(...rows.map(r=>r.total));$("plansBody").innerHTML=`<div class="grid cols3">${rows.map(r=>`<div class="card" style="padding:18px;${r.total===best?"border:2px solid var(--gold)":""}"><b>${r.name}</b>${r.total===best?"<div class='chip'>Winner — Lowest Total</div>":""}<p>Down: ${r.down}% (${fmtPKR(price*r.down/100)})<br>Monthly: <b>${fmtPKR(r.emi)}</b><br>Tenure: ${r.tenure} years<br>Total Payable: <b>${fmtPKR(r.total)}</b></p></div>`).join("")}</div><p style="margin-top:14px"><b>Verdict:</b> ${rows.find(r=>r.total===best).name} costs least overall, even if its monthly figure is not the smallest. Always compare total payable, not just the monthly number.</p>`}
+function toolAreaHTML(){return `<div class="card" style="padding:22px;max-width:640px"><label>Value</label><input class="field mono" type="number" id="areaVal" value="10" oninput="renderArea()"><label>From unit</label><select class="field" id="areaFrom" onchange="renderArea()"><option>marla</option><option>kanal</option><option>sqft</option><option>sqyd</option><option>sqm</option><option>acre</option></select><label>Marla size (city standard)</label><div class="tabs"><button class="tab on" id="marlaLhr" onclick="setMarla(225)">Lahore: 225 sq ft</button><button class="tab" id="marlaKhi" onclick="setMarla(272.25)">Karachi: 272.25 sq ft</button></div><div id="areaOut" style="margin-top:16px"></div><button class="btn" style="margin-top:12px" onclick="swapArea()">Swap / Refresh Animation</button></div>`}
+let marlaSqft=225;function setMarla(v){marlaSqft=v;$("marlaLhr").classList.toggle("on",v===225);$("marlaKhi").classList.toggle("on",v!==225);renderArea()}
+function renderArea(){const v=+$("areaVal").value||0,from=$("areaFrom").value;const out=areaConvert(v,from,marlaSqft);$("areaOut").innerHTML=Object.entries(out).map(([k,val])=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>${k}</span><b class="mono">${val.toLocaleString("en-PK",{maximumFractionDigits:2})}</b></div>`).join("")}
+function swapArea(){const el=$("areaOut");el.style.transform="scale(.97)";setTimeout(()=>el.style.transform="",200);renderArea()}
+function toolStampHTML(){return `<div class="card" style="padding:22px;max-width:640px"><label>Property price</label><input class="field mono" type="number" id="stampPrice" value="35000000" oninput="renderStamp()"><label>Stamp duty % (editable)</label><input class="field mono" type="number" id="stampRate" value="3" step="0.5" oninput="renderStamp()"><label>Transfer / registration % (editable)</label><input class="field mono" type="number" id="stampTrans" value="1" step="0.5" oninput="renderStamp()"><div class="mono" style="font-size:30px;color:var(--softgold);margin-top:14px" id="stampTotal">—</div><p class="muted" id="stampNote"></p><p class="muted" style="font-size:13px">Disclaimer: Rates vary by city, society and property type. This is an indicative estimate only — confirm the exact figure with Aurevo's legal team before purchase.</p></div>`}
+function renderStamp(){const price=+$("stampPrice").value||0,rate=+$("stampRate").value||0,trans=+$("stampTrans").value||0;const total=price*(rate+trans)/100;$("stampTotal").textContent=fmtPKR(total);$("stampNote").textContent=`Stamp duty (${rate}%): ${fmtPKR(price*rate/100)} • Transfer (${trans}%): ${fmtPKR(price*trans/100)} • Total cost with tax: ${fmtPKR(price+total)}`}
+function toolCrmHTML(){return `<div class="card" style="padding:22px"><p class="muted">Every lead captured from a tool, form or AI chat appears here. This is the same data the admin dashboard uses.</p><div id="crmBody"></div></div>`}
+function renderCrm(){$("crmBody").innerHTML=leads.slice(0,20).map(l=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span><b>${l.name}</b> • ${l.phone}<br><span class="muted">${l.source} • ${l.note||""}</span></span><span class="chip">${l.stage}</span></div>`).join("")||"<p class='muted'>No leads yet.</p>"}
+/* About, Services, Insights, Contact */
+function renderAbout(){$("aboutWrap").innerHTML=`<p class="eyebrow">About Aurevo</p><h2>From one office in Lahore<br>to 4,800 families housed.</h2><div style="display:grid;gap:14px;margin-top:20px">${[["2011","Aurevo opens in Lahore with one promise: verified titles, honest prices."],["2015","Karachi office opens. Clifton and DHA Karachi join the portfolio."],["2019","Islamabad office opens. F-7 and E-11 become our northern home."],["2022","The toolkit launches: calculators, ROI and payment-plan comparison, free for everyone."],["2026","250+ projects, 12M sq ft, and a simple rule that never changed: tell the truth first."]].map(([y,t])=>`<div class="card" style="padding:18px;display:flex;gap:18px"><b style="font-family:Fraunces,serif;font-size:32px;color:var(--softgold)">${y}</b><p style="margin:0">${t}</p></div>`).join("")}</div>
+<h3 style="margin-top:34px">Founder Letter</h3><p>Dear buyer, I started Aurevo after watching a family lose their savings to a plot that was never theirs. We do not sell dreams, we verify documents, we show the monthly number before the house, and we stay after the keys. If a deal is wrong for you, we will say so — even if it costs us a sale. That is the whole business. — Ayesha Rahman, Founder & CEO</p>
+<h3>Team</h3><div class="grid cols4">${TEAM.map(m=>`<div class="card" style="padding:18px"><div style="width:56px;height:56px;border-radius:50%;background:var(--goldgrad);color:#1a1405;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px">${m.name.split(" ").map(w=>w[0]).join("")}</div><b style="display:block;margin-top:10px">${m.name}</b><div class="muted" style="font-size:13px">${m.role}</div><p class="muted" style="font-size:13px">${m.bio}</p></div>`).join("")}</div>
+<h3>Values & Awards</h3><p class="muted">Verified first. Transparent always. After-sale care, not after-sale silence. Awards: Best Emerging Real Estate Platform 2024, Customer Trust Award 2025, Top Investment Advisory 2025 (industry lists, verified on request).</p>`}
+function renderServices(){$("servicesWrap").innerHTML=`<p class="eyebrow">Services</p><h2>Everything a property<br>journey needs.</h2><div class="grid cols2">${[["Buy a Home","Verified listings, honest monthly plans, and an advisor who checks documents before you pay."],["Sell Your Property","Real pricing from recent sales, professional photos, and buyers who are actually qualified."],["Rent","Verified tenants and landlords, clear agreements, and rent collection without chasing."],["Investment Advisory","ROI, yield and exit planning — plots vs apartments, with numbers, not hype."],["Property Management","Tenants, maintenance and rent, handled while you live your life."],["Legal & Documentation","Title verification, NOCs, transfer and registration — handled by our legal team."]].map(([t,d])=>`<div class="card" style="padding:22px"><h3>${t}</h3><p class="muted">${d}</p><button class="btn" onclick="showView('contact')">Talk to an Advisor</button></div>`).join("")}</div>`}
+function renderInsights(){$("insightsWrap").innerHTML=`<p class="eyebrow">Insights</p><h2>Read before you sign.</h2><div class="grid cols3">${ARTICLES.map((a,i)=>`<div class="card lightcard" style="padding:20px"><p class="eyebrow">${a.read}</p><h3>${a.title}</h3><p class="muted">${a.body.slice(0,180)}…</p><button class="btn dark" onclick="openArticle(${i})">Read Full Article</button></div>`).join("")}</div>`}
+let contactStep=1,contactData={};
+function renderContact(){contactStep=1;contactData={};$("contactWrap").innerHTML=`<div class="grid cols2"><div><p class="eyebrow">Contact</p><h2>Talk to a human.<br>Within 30 minutes.</h2><div id="contactSteps"></div></div><div><div class="card" style="padding:22px"><h3 style="margin-top:0">Offices & Channels</h3><p><b>Lahore:</b> DHA Phase 6, Main Boulevard — 10am to 8pm<br><b>Karachi:</b> Clifton Block 4 — 10am to 8pm<br><b>Islamabad:</b> F-7 Markaz — 10am to 8pm</p><div style="display:grid;gap:10px"><a class="btn ghost" style="text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://wa.me/447585438180?text=Hi%20Aurevo%2C%20I%20need%20an%20advisor.">WhatsApp Advisor</a><a class="btn ghost" style="text-align:center;text-decoration:none" href="mailto:hello@aurevo.example">Email: hello@aurevo.example</a><button class="btn ghost" onclick="toast('Call: +44 7585 438180 (WhatsApp first, for fastest reply).')">Call Advisor</button></div><div style="background:#0d1426;border-radius:14px;padding:16px;margin-top:16px"><b>Map teaser</b><p class="muted">DHA Lahore • Clifton Karachi • F-7 Islamabad — pins pulse on the Home map teaser. For a live visit, book a viewing and your advisor will share the exact pin.</p></div></div></div></div>`;renderContactStep()}
+function renderContactStep(){const box=$("contactSteps");if(contactStep===1)box.innerHTML=`<label>Full name</label><input class="field" id="cName" placeholder="Your name"><label>Phone (PK format)</label><input class="field" id="cPhone" placeholder="03xx-xxxxxxx"><button class="btn" style="margin-top:14px" onclick="contactNext(2)">Next: Intent & Budget</button>`;else if(contactStep===2)box.innerHTML=`<label>Intent</label><select class="field" id="cIntent"><option>Buy</option><option>Sell</option><option>Rent</option><option>Invest</option></select><label>Budget (PKR)</label><input class="field mono" type="number" id="cBudget" value="35000000"><label>Preferred city</label><select class="field" id="cCity"><option>Lahore</option><option>Karachi</option><option>Islamabad</option></select><div style="display:flex;gap:10px;margin-top:14px"><button class="btn ghost" onclick="contactStep=1;renderContactStep()">Back</button><button class="btn" onclick="contactNext(3)">Next: Message</button></div>`;else box.innerHTML=`<label>Message</label><textarea class="field" id="cMsg" rows="4" placeholder="What are you looking for? Timeline?"></textarea><div style="display:flex;gap:10px;margin-top:14px"><button class="btn ghost" onclick="contactStep=2;renderContactStep()">Back</button><button class="btn" onclick="submitContact()">Send & Get Call in 30 Minutes</button></div>`}
+function contactNext(n){if(n===2){const name=$("cName").value.trim(),phone=$("cPhone").value.trim();if(!name||!/^03\d{2}-?\d{7}$/.test(phone.replace(/\s/g,""))){toast("Please enter your name and a valid PK phone (03xx-xxxxxxx).");return}contactData={name,phone}}if(n===3){contactData.intent=$("cIntent").value;contactData.budget=$("cBudget").value;contactData.city=$("cCity").value}contactStep=n;renderContactStep()}
+function submitContact(){contactData.msg=$("cMsg").value||"";addLead(contactData.name,contactData.phone,"Contact Form",contactData.intent+" • "+fmtPKR(+contactData.budget||0)+" • "+contactData.city+" • "+contactData.msg);$("contactSteps").innerHTML=`<div style="text-align:center;padding:20px"><div style="font-size:56px;color:var(--softgold)">✓</div><h3>Request received.</h3><p class="muted">An advisor will call you within 30 minutes. Check WhatsApp for a confirmation message.</p></div>`;confettiGold()}
+/* Admin */
+function renderAdmin(){if(!adminLogged){$("adminWrap").innerHTML=`<div class="card" style="padding:26px;max-width:460px;margin:0 auto"><p class="eyebrow">Admin Dashboard</p><h2>Demo Login</h2><p class="muted">Use the demo credentials from the spec: admin / aurevo123. No real admin data is exposed here — leads are stored on this device only.</p><label>Username</label><input class="field" id="adminUser" placeholder="admin"><label>Password</label><input class="field" type="password" id="adminPass" placeholder="aurevo123"><button class="btn" style="margin-top:14px;width:100%" onclick="adminLogin()">Login to Dashboard</button></div>`;return}
+const totalLeads=leads.length,closed=leads.filter(l=>l.stage==="Closed").length,conv=totalLeads?Math.round(closed/totalLeads*100):0;
+$("adminWrap").innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px"><h2 style="margin:0">Admin Dashboard</h2><button class="btn ghost" onclick="adminLogged=false;renderAdmin()">Logout</button></div>
+<div class="grid cols4" style="margin-top:16px">
+<div class="card" style="padding:18px"><b>Total Leads</b><div style="font-size:32px;font-family:Fraunces,serif">${totalLeads}</div><div class="muted">From tools, forms & AI</div></div>
+<div class="card" style="padding:18px"><b>Saved Homes</b><div style="font-size:32px;font-family:Fraunces,serif">${favorites.size}</div><div class="muted">On this device</div></div>
+<div class="card" style="padding:18px"><b>Properties</b><div style="font-size:32px;font-family:Fraunces,serif">${allProps().length}</div><div class="muted">Live listings</div></div>
+<div class="card" style="padding:18px"><b>Conversion</b><div style="font-size:32px;font-family:Fraunces,serif">${conv}%</div><div class="muted">Closed / total leads</div></div>
+</div>
+<h3>Lead Pipeline — drag a lead between stages</h3>
+<div class="kanban" id="kanban"></div>
+<h3>Leads Table</h3>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><input class="field" id="leadSearch" placeholder="Search leads…" oninput="renderAdminTable()" style="max-width:320px"><button class="btn ghost" onclick="exportLeadsCSV()">Export CSV</button></div>
+<div id="adminTable" style="overflow:auto;margin-top:12px"></div>
+<h3>Property Manager</h3>
+<div class="card" style="padding:18px"><label>Title</label><input class="field" id="pmTitle" placeholder="e.g. New 1 Kanal House DHA"><label>City / Area</label><input class="field" id="pmArea" placeholder="Lahore / DHA Phase 5"><label>Price (PKR)</label><input class="field mono" type="number" id="pmPrice" value="40000000"><label>Image URL (preview below)</label><input class="field" id="pmImg" placeholder="https://…" oninput="$('pmPreview').src=this.value"><img id="pmPreview" style="width:100%;height:180px;object-fit:cover;border-radius:14px;margin-top:10px" src="${IMG.h1}" alt="Preview"><button class="btn" style="margin-top:12px" onclick="addProperty()">Add Property</button></div>
+<div id="pmList" style="margin-top:14px"></div>
+<h3>Activity Feed</h3><div class="card" style="padding:18px" id="activityFeed"></div>`;
+renderKanban();renderAdminTable();renderPmList();$("activityFeed").innerHTML=(LS("aurevo_activity")||["No activity yet."]).map(a=>`<div style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1)">${a}</div>`).join("")}
+function adminLogin(){if($("adminUser").value==="admin"&&$("adminPass").value==="aurevo123"){adminLogged=true;logActivity("Admin logged in (demo)");renderAdmin();toast("Welcome back, Admin.")}else{toast("Wrong demo credentials. Try admin / aurevo123.")}}
+function renderKanban(){const stages=["New","Contacted","Viewing","Negotiation","Closed"];const kb=$("kanban");if(!kb)return;kb.innerHTML=stages.map(st=>`<div class="kan" ondragover="event.preventDefault()" ondrop="dropLead(event,'${st}')"><b>${st}</b><div>${leads.filter(l=>l.stage===st).map(l=>`<div class="leadcard" draggable="true" ondragstart="event.dataTransfer.setData('text/plain','${l.id}')"><b>${l.name}</b><div class="muted" style="font-size:12px">${l.phone} • ${l.source}</div><div style="font-size:12px">${l.note||""}</div><button class="btn ghost" style="padding:6px 10px;min-height:36px;margin-top:6px" onclick="viewLead(${l.id})">View Snapshot</button></div>`).join("")||"<p class='muted'>No leads</p>"}</div></div>`).join("")}
+function dropLead(e,st){e.preventDefault();const id=+e.dataTransfer.getData("text/plain");const l=leads.find(x=>x.id===id);if(l){l.stage=st;LS("aurevo_leads",leads);logActivity(`Lead ${l.name} moved to ${st}`);renderKanban();renderAdminTable();toast(`Lead moved to ${st}.`)}}
+function viewLead(id){const l=leads.find(x=>x.id===id);if(!l)return;$("leadModalBox").innerHTML=`<div style="display:flex;justify-content:space-between"><h3 style="margin:0">${l.name}</h3><button class="btn ghost" onclick="closeModal('leadModal')">Close</button></div><p>Phone: ${l.phone}<br>Source: ${l.source}<br>Stage: ${l.stage}<br>Snapshot: ${l.note||"No calculation snapshot saved."}</p><button class="btn" onclick="closeModal('leadModal')">Close</button>`;$("leadModal").classList.add("open")}
+function renderAdminTable(){const q=($("leadSearch")?.value||"").toLowerCase();const list=leads.filter(l=>(l.name+" "+l.phone+" "+l.source).toLowerCase().includes(q));const el=$("adminTable");if(!el)return;el.innerHTML=`<table><tr><th>Name</th><th>Phone</th><th>Source</th><th>Stage</th><th>Note</th></tr>${list.map(l=>`<tr><td>${l.name}</td><td>${l.phone}</td><td>${l.source}</td><td>${l.stage}</td><td>${l.note||""}</td></tr>`).join("")}</table>`}
+function exportLeadsCSV(){const csv="Name,Phone,Source,Stage,Note\n"+leads.map(l=>[l.name,l.phone,l.source,l.stage,(l.note||"").replace(/,/g,";")].join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="aurevo-leads.csv";a.click();toast("Leads CSV downloaded.")}
+function addProperty(){const title=$("pmTitle").value.trim(),area=$("pmArea").value.trim(),price=+$("pmPrice").value||0,img=$("pmImg").value||IMG.h1;if(!title||!area||!price){toast("Please fill title, area and price.");return}const id=Math.max(...allProps().map(p=>p.id))+1;const [city,areaName]=area.includes("/")?area.split("/").map(s=>s.trim()):["Lahore",area];const np={id,title,slug:title.toLowerCase().replace(/[^a-z0-9]+/g,"-"),city,area:areaName,type:"House",status:"Ready",price,marla:10,sqft:2250,beds:4,baths:4,featured:false,images:[img],amenities:["New Listing"],plan:{booking:10,down:20,quarterly:6,possession:10},life:{schools:85,hospitals:85,commute:85,safety:90,investment:85},agent:"Aurevo Team",desc:"Added from the admin property manager."};PROPS.push(np);customProps.push(np);LS("aurevo_custom",customProps);logActivity("Property added: "+title);renderPmList();toast("Property added and live in Explore.")}
+function renderPmList(){$("pmList").innerHTML=allProps().slice(-6).reverse().map(p=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>${p.title} — ${fmtPKR(p.price)}</span><button class="btn ghost" onclick="deleteProperty(${p.id})">Delete</button></div>`).join("")}
+function deleteProperty(id){PROPS=PROPS.filter(p=>p.id!==id);customProps=customProps.filter(p=>p.id!==id);LS("aurevo_custom",customProps);logActivity("Property deleted: ID "+id);renderPmList();toast("Property deleted.")}
+/* AI Assistant */
+function openAI(){$("aiSheet").classList.add("open");if(!$("aiMsgs").innerHTML)$("aiMsgs").innerHTML=`<div style="background:#0d1426;border-radius:14px;padding:12px">Assalam-o-Alaikum, I am Ask Aurevo. Tell me your budget, city and type — I will find matching homes and calculate the monthly plan.</div>`}
+function closeAI(){$("aiSheet").classList.remove("open")}
+function aiWhatsApp(){window.open("https://wa.me/447585438180?text="+encodeURIComponent("Hi Aurevo, I was chatting with Ask Aurevo and want an advisor."),"_blank")}
+function askAI(){const q=$("aiInput").value.trim();if(!q)return;$("aiMsgs").innerHTML+=`<div style="background:#123a3a;border-radius:14px;padding:12px;text-align:right">${q}</div>`;$("aiInput").value="";const low=q.toLowerCase();let city="";if(low.includes("lahore"))city="Lahore";else if(low.includes("karachi"))city="Karachi";else if(low.includes("islamabad"))city="Islamabad";let type="";if(low.includes("house"))type="House";else if(low.includes("apartment")||low.includes("flat"))type="Apartment";else if(low.includes("plot"))type="Plot";else if(low.includes("commercial")||low.includes("shop")||low.includes("office"))type="Commercial";let beds=0;const bm=low.match(/(\d+)\s*bed/);if(bm)beds=+bm[1];let budget=Infinity;const cm=low.match(/(\d+(?:\.\d+)?)\s*crore/);const lm=low.match(/(\d+(?:\.\d+)?)\s*lakh/);if(cm)budget=+cm[1]*10000000;else if(lm)budget=+lm[1]*100000;const matches=allProps().filter(p=>(!city||p.city===city)&&(!type||p.type===type)&&(!beds||p.beds>=beds)&&p.price<=budget).slice(0,3);setTimeout(()=>{$("aiMsgs").innerHTML+=`<div style="background:#0d1426;border-radius:14px;padding:12px">${matches.length?`I found ${matches.length} match${matches.length>1?"es":""} for you. Tap View to see the full detail, or Calculate to see the monthly plan.`:"I could not find an exact match for that. Try a wider budget, or tell me a city — Lahore, Karachi or Islamabad — and I will show the closest homes."}</div>`;$("aiCards").innerHTML=matches.map(p=>`<div class="card" style="padding:14px;display:flex;gap:12px;align-items:center"><img src="${p.images[0]}" style="width:84px;height:64px;object-fit:cover;border-radius:10px"><div style="flex:1"><b>${p.title}</b><div class="muted">${fmtPKR(p.price)} • ${p.area}</div></div><button class="btn" style="padding:9px 12px;min-height:40px" onclick="closeAI();openDetail(${p.id})">View</button><button class="btn ghost" style="padding:9px 12px;min-height:40px" onclick="closeAI();calcForProperty(${p.id})">Calculate</button></div>`).join("");$("aiMsgs").scrollTop=$("aiMsgs").scrollHeight},500)}
+/* Init */
+$("aiOrb").addEventListener("click",openAI);
+renderNav();renderHome();renderStepper();renderProperties();updateTray();miniCalc();
+let pre=0;const preIv=setInterval(()=>{pre+=Math.ceil(Math.random()*14);if(pre>=100){pre=100;clearInterval(preIv);setTimeout(()=>$("preloader").classList.add("done"),300)}$("preCount").textContent=pre+"%"},110);
+document.addEventListener("mousemove",e=>{const s=$("skylineSvg");if(s)s.style.transform=`translateX(${(e.clientX/innerWidth-.5)*-14}px)`});
+if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+</script>
+</body>
+</html>
