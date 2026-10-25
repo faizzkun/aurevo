@@ -40,7 +40,7 @@ section{padding:96px 0} @media(max-width:700px){section{padding:64px 0}}
 header{position:fixed;top:0;left:0;right:0;z-index:250;transition:transform .35s,background .35s,backdrop-filter .35s}
 header.hide{transform:translateY(-100%)}
 header.glass{background:rgba(6,32,26,.82);backdrop-filter:blur(20px);border-bottom:var(--hair)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
 .logo{font-family:"Plus Jakarta Sans",sans-serif;font-weight:900;font-size:26px;letter-spacing:.06em;cursor:pointer}
 .logo span{color:var(--gold)}
 .navlinks{display:flex;gap:18px;flex-wrap:wrap}
@@ -183,6 +183,45 @@ section.view{padding-top:150px}
 table th,table td{border-color:rgba(0,0,0,.1)!important}
 .footerword{-webkit-text-stroke:1px rgba(22,163,74,.45)}
 </style>
+<style>
+/* MOBILE FIX v2.2 — compact header, real hamburger menu, no giant hero */
+.menuBtn{display:none}
+.mobileMenu{display:none}
+@media(max-width:899px){
+  .top-hide{display:none!important}
+  header .wrap.nav{padding:8px 20px!important;gap:10px}
+  .logo{font-size:22px!important}
+  .navlinks{display:none!important}
+  .nav-actions{display:none!important}
+  .menuBtn{display:inline-flex!important;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid #d1d5db;background:#fff;color:#121212;border-radius:12px;font-size:24px;margin-left:auto}
+  .mobileMenu{display:none;background:#fff;border-top:1px solid #e5e7eb;max-height:70vh;overflow:auto;padding:8px 20px 20px}
+  .mobileMenu.open{display:block}
+  .mobileMenu button,.mobileMenu a{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #f1f5f9;color:#121212!important;font-weight:700;font-size:16px;padding:14px 4px;text-decoration:none}
+  section.view{padding-top:104px!important}
+  #view-home{padding-top:0!important}
+  .hero{padding-top:120px!important;padding-bottom:32px!important;min-height:auto!important}
+  .hero h1{font-size:32px!important;line-height:1.15!important}
+  h2{font-size:26px!important}
+  h3{font-size:20px!important}
+  body{font-size:15px!important}
+  .searchpill select,.searchpill input{flex:1 1 100%!important;min-width:0!important}
+  .searchpill{padding:10px!important}
+  .card img{height:180px!important}
+  .stat b{font-size:28px!important}
+  .footerword{font-size:64px!important}
+  main{padding-bottom:84px}
+  header.hide{transform:none!important}
+  .orb{bottom:88px!important;right:14px!important;width:52px!important;height:52px!important;font-size:22px!important}
+  .tabbar{left:8px!important;right:8px!important;transform:none!important;justify-content:space-between!important;border-radius:20px!important}
+  .tabbar button{padding:8px 4px!important;font-size:11px!important;flex:1}
+  section{padding:40px 0!important}
+  #preloader{display:none!important}
+}
+@media(min-width:900px){
+  .menuBtn{display:none!important}
+  .mobileMenu{display:none!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -196,16 +235,32 @@ table th,table td{border-color:rgba(0,0,0,.1)!important}
 <div style="color:var(--mist);font-size:13px;letter-spacing:.14em">OWN THE LIFE YOU IMAGINED</div>
 </div>
 <header id="siteHeader">
-<div style="background:#06201A;color:#fff;font-size:13px;line-height:1.5"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;padding-top:8px;padding-bottom:8px"><b>Faizan Khan — Founder, Aurevo</b><span>Web Developer &amp; AI Automation Specialist</span><a href="https://wa.me/447585438180" target="_blank" rel="noopener" style="color:#fff">WhatsApp: +44 7585 438180</a><a href="mailto:faizankhan.work@proton.me" style="color:#fff">faizankhan.work@proton.me</a><a href="https://www.linkedin.com/in/faizzkun/" target="_blank" rel="noopener" style="color:#fff">LinkedIn</a><a href="https://faizankhan.pages.dev/" target="_blank" rel="noopener" style="color:#fff">Portfolio</a></div></div>
+<div style="background:#06201A;color:#fff;font-size:13px;line-height:1.5"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;padding-top:8px;padding-bottom:8px"><b>Faizan Khan — Founder, Aurevo</b><span class="top-hide">Web Developer &amp; AI Automation Specialist</span><a href="https://wa.me/447585438180" target="_blank" rel="noopener" style="color:#fff">WhatsApp: +44 7585 438180</a><a class="top-hide" href="mailto:faizankhan.work@proton.me" style="color:#fff">faizankhan.work@proton.me</a><a class="top-hide" href="https://www.linkedin.com/in/faizzkun/" target="_blank" rel="noopener" style="color:#fff">LinkedIn</a><a class="top-hide" href="https://faizankhan.pages.dev/" target="_blank" rel="noopener" style="color:#fff">Portfolio</a></div></div>
 <div class="wrap nav">
-<div class="logo" onclick="showView('home')">A<span>UREVO</span></div>
+<div class="logo" onclick="showView('home')">A<span>UREVO</span></div><button class="menuBtn" id="menuBtn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
 <nav class="navlinks" id="navLinks" aria-label="Main navigation"></nav>
-<div style="display:flex;gap:8px;align-items:center">
+<div class="nav-actions" style="display:flex;gap:8px;align-items:center">
 <button class="btn ghost" style="min-height:44px;padding:9px 14px" onclick="toggleLang()" id="langBtn">EN / UR</button>
 <button class="btn" style="min-height:44px;padding:9px 16px" onclick="showView('contact')">Book Viewing</button>
 </div>
 </div>
 </header>
+<div id="mobileMenu" class="mobileMenu">
+<button onclick="showView('home')">Home</button>
+<button onclick="showView('properties')">Explore Karachi Homes</button>
+<button onclick="showView('tools')">Tools &amp; Calculators</button>
+<button onclick="showView('about')">About</button>
+<button onclick="showView('services')">Services</button>
+<button onclick="showView('insights')">Insights</button>
+<button onclick="showView('favorites')">Saved Homes</button>
+<button onclick="showView('compare')">Compare</button>
+<button onclick="showView('contact')">Book Viewing</button>
+<button onclick="toggleLang();closeMenu()">EN / UR Switch</button>
+<a href="https://wa.me/447585438180" target="_blank" rel="noopener">WhatsApp Faizan: +44 7585 438180</a>
+<a href="mailto:faizankhan.work@proton.me">Email: faizankhan.work@proton.me</a>
+<button onclick="showView('admin')">Admin Login</button>
+</div>
+
 
 <main id="main">
 <!-- HOME -->
@@ -513,9 +568,11 @@ function logActivity(txt){let a=LS("aurevo_activity")||[];a.unshift(new Date().t
 function addLead(name,phone,source,note){const id=(leads.length?Math.max(...leads.map(l=>l.id)):0)+1;leads.unshift({id,name,phone,source,stage:"New",note:note||""});LS("aurevo_leads_v2",leads);logActivity("New lead: "+name+" via "+source);return id}
 /* Navigation + header + cursor + preloader */
 const NAV=[["home","Home"],["properties","Explore"],["tools","Tools"],["about","About"],["services","Services"],["insights","Insights"],["contact","Contact"]];
+function toggleMenu(){const m=$("mobileMenu"),b=$("menuBtn");if(!m)return;m.classList.toggle("open");if(b)b.textContent=m.classList.contains("open")?"✕":"☰"}
+function closeMenu(){const m=$("mobileMenu"),b=$("menuBtn");if(m)m.classList.remove("open");if(b)b.textContent="☰"}
 function renderNav(){ $("navLinks").innerHTML=NAV.map(([v,l])=>`<button onclick="showView('${v}')" data-nav="${v}">${l}</button>`).join(""); document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.t===currentView())) }
 function currentView(){return document.querySelector(".view.active")?.id.replace("view-","")||"home"}
-function showView(v){document.querySelectorAll(".view").forEach(s=>s.classList.remove("active"));const el=$("view-"+v);if(el)el.classList.add("active");document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b.dataset.nav===v));document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.t===v));window.scrollTo({top:0,behavior:"smooth"});vibrate();if(v==="properties")renderProperties();if(v==="favorites")renderFavorites();if(v==="compare")renderCompare();if(v==="tools")renderTools();if(v==="admin")renderAdmin();if(v==="about")renderAbout();if(v==="services")renderServices();if(v==="insights")renderInsights();if(v==="contact")renderContact()}
+function showView(v){closeMenu();document.querySelectorAll(".view").forEach(s=>s.classList.remove("active"));const el=$("view-"+v);if(el)el.classList.add("active");document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b.dataset.nav===v));document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("on",b.dataset.t===v));window.scrollTo({top:0,behavior:"smooth"});vibrate();if(v==="properties")renderProperties();if(v==="favorites")renderFavorites();if(v==="compare")renderCompare();if(v==="tools")renderTools();if(v==="admin")renderAdmin();if(v==="about")renderAbout();if(v==="services")renderServices();if(v==="insights")renderInsights();if(v==="contact")renderContact()}
 function toggleLang(){langUR=!langUR;document.body.classList.toggle("light-urdu",langUR);document.documentElement.dir=langUR?"rtl":"ltr";$("langBtn").textContent=langUR?"UR / EN":"EN / UR";toast(langUR?"Urdu mode: core headings ab Urdu font aur RTL me dikhen ge.":"English mode restored.")}
 let lastScroll=0;window.addEventListener("scroll",()=>{const y=window.scrollY;const h=document.documentElement.scrollHeight-innerHeight;$("progress").style.width=(h>0?y/h*100:0)+"%";const hdr=$("siteHeader");hdr.classList.toggle("glass",y>80);hdr.classList.toggle("hide",y>lastScroll&&y>200);lastScroll=y},{passive:true});
 document.addEventListener("mousemove",e=>{const d=$("cursorDot"),r=$("cursorRing");d.style.transform=`translate(${e.clientX-4}px,${e.clientY-4}px)`;r.style.transform=`translate(${e.clientX-22}px,${e.clientY-22}px)`});
@@ -717,7 +774,7 @@ function askAI(){const q=$("aiInput").value.trim();if(!q)return;$("aiMsgs").inne
 /* Init */
 $("aiOrb").addEventListener("click",openAI);
 renderNav();renderHome();renderStepper();renderProperties();updateTray();miniCalc();
-let pre=0;const preIv=setInterval(()=>{pre+=Math.ceil(Math.random()*14);if(pre>=100){pre=100;clearInterval(preIv);setTimeout(()=>$("preloader").classList.add("done"),300)}$("preCount").textContent=pre+"%"},110);
+let pre=0;setTimeout(()=>{const pl=$("preloader");if(pl)pl.classList.add("done")},2500);const preIv=setInterval(()=>{pre+=Math.ceil(Math.random()*14);if(pre>=100){pre=100;clearInterval(preIv);setTimeout(()=>$("preloader").classList.add("done"),300)}$("preCount").textContent=pre+"%"},110);
 document.addEventListener("mousemove",e=>{const s=$("skylineSvg");if(s)s.style.transform=`translateX(${(e.clientX/innerWidth-.5)*-14}px)`});
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script>
