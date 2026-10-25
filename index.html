@@ -197,7 +197,7 @@ table th,table td{border-color:rgba(0,0,0,.1)!important}
   .mobileMenu{display:none;background:#fff;border-top:1px solid #e5e7eb;max-height:70vh;overflow:auto;padding:8px 20px 20px}
   .mobileMenu.open{display:block}
   .mobileMenu button,.mobileMenu a{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #f1f5f9;color:#121212!important;font-weight:700;font-size:16px;padding:14px 4px;text-decoration:none}
-  section.view{padding-top:104px!important}
+  section.view{padding-top:124px!important}
   #view-home{padding-top:0!important}
   .hero{padding-top:120px!important;padding-bottom:32px!important;min-height:auto!important}
   .hero h1{font-size:32px!important;line-height:1.15!important}
@@ -220,6 +220,35 @@ table th,table td{border-color:rgba(0,0,0,.1)!important}
 @media(min-width:900px){
   .menuBtn{display:none!important}
   .mobileMenu{display:none!important}
+}
+</style>
+<style>
+/* MOBILE FIX v2.3 — Tools de-clutter + stop focus-zoom on other pages */
+@media(max-width:899px){
+  html{overflow-x:hidden}
+  /* 1. Inputs at 16px stop Android/iOS auto-zoom when a field is tapped — the main pinch-zoom cause */
+  input,select,textarea,.field{font-size:16px!important}
+  /* 2. Tools tabs: one scrollable row instead of 7 big wrapping pills */
+  #toolTabs{flex-wrap:nowrap!important;overflow-x:auto!important;padding-bottom:6px;scrollbar-width:none}
+  #toolTabs::-webkit-scrollbar{display:none}
+  #toolTabs .tab{flex:0 0 auto!important;white-space:nowrap!important;padding:10px 14px!important;font-size:14px!important}
+  /* 3. Every inline 1fr+1fr grid (installment fields, detail specs, mini calculator) stacks full-width on phone */
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  /* 4. Tools cards tighter + big EMI numbers smaller */
+  #toolBody .card{padding:16px!important}
+  #toolBody .mono{font-size:28px!important}
+  #toolBody h3{font-size:19px!important}
+  #instChart svg{height:140px!important}
+  /* 5. Tables: smaller text, admin leads table scrolls inside itself instead of widening the page */
+  th,td{padding:8px 6px!important;font-size:13px!important}
+  #adminTable{overflow-x:auto!important}
+  #adminTable table{white-space:nowrap}
+  /* 6. Detail sticky CTA + compare tray: stack / sit above the bottom tab bar, never overflow the width */
+  .stickycta{flex-direction:column!important}
+  .stickycta .btn,.stickycta a{width:100%!important;flex:none!important}
+  #compareTray{left:8px!important;right:8px!important;transform:none!important;justify-content:center!important;flex-wrap:wrap!important;border-radius:20px!important;bottom:84px!important}
+  .gauge{width:76px!important;height:76px!important}
+  #view-tools h2{font-size:24px!important}
 }
 </style>
 </head>
