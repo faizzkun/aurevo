@@ -288,6 +288,33 @@ table th,table td{border-color:rgba(0,0,0,.1)!important}
   .emibanner b{font-size:20px}
 }
 </style>
+<style>
+/* AUREVO v2.5 — stop right-side cut on narrow phones: flex/grid items must shrink below content width */
+@media(max-width:899px){
+  .grid>*{min-width:0!important}
+  .card{min-width:0!important}
+  .cardbody{min-width:0!important}
+  /* Compact cards: body can shrink, so nowrap lines ellipsis inside the card instead of pushing it wider */
+  #propGrid .card>div:first-child,#favWrap .card>div:first-child,.similar-grid .card>div:first-child{flex:0 0 110px}
+  #propGrid .cardbody,#favWrap .cardbody,.similar-grid .cardbody{flex:1;min-width:0}
+  /* Spec pills wrap to a second row instead of being cut off at the screen edge */
+  .specrow{flex-wrap:wrap!important}
+  /* Life Score: 5 gauges must fit inside the card, not push it wider */
+  .lifegrid{gap:6px}
+  .lifegrid .gauge{max-width:56px}
+  /* Tables scroll inside their card instead of pushing the card wider */
+  .card table{max-width:100%}
+  .gallery-actions{flex-wrap:wrap!important;overflow-x:visible!important}
+  .gallery-actions .btn{flex:1 1 auto}
+  /* Skyline + hero background: never wider than the screen */
+  .skyline{width:100%!important;max-width:100%!important}
+}
+@media(max-width:400px){
+  .lifegrid .gauge{max-width:48px}
+  #propGrid .card>div:first-child,#favWrap .card>div:first-child,.similar-grid .card>div:first-child{flex:0 0 100px}
+  .specpill{font-size:11px;padding:4px 8px}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -674,7 +701,7 @@ function openDetail(id){const p=allProps().find(x=>x.id===id);if(!p)return;curre
 <div class="specrow" style="margin-top:12px">${pills.map(x=>`<span class="specpill">${x}</span>`).join("")}</div>
 <div class="emibanner" style="margin-top:18px"><div><div style="font-size:13px;opacity:.85">Own this home from</div><b>${fmtPKR(emiFrom)}/month</b><div style="font-size:13px;opacity:.85">20% down • 10 years • 14% reducing balance</div></div><button class="btn" style="background:#fff;color:#06201A" onclick="calcForProperty(${p.id})">See Full Plan</button></div>
 <div class="grid cols2" style="margin-top:18px">
-<div class="card" style="padding:0;overflow:hidden"><div style="position:relative"><img id="detailMain" src="${p.images[0]}" style="width:100%;height:420px;object-fit:cover;border-radius:0;cursor:zoom-in" onclick="openLightbox(0)" alt="${p.title}"><span class="chip" style="position:absolute;left:14px;top:14px">${p.status}</span></div><div style="padding:16px"><div style="display:flex;gap:10px;overflow-x:auto">${p.images.map((im,ix)=>`<img src="${im}" style="width:90px;height:64px;object-fit:cover;border-radius:12px;cursor:pointer;flex:0 0 auto;border:2px solid ${ix===0?"var(--gold)":"transparent"}" onclick="setDetailImg(${ix},this)">`).join("")}</div><div style="display:flex;gap:8px;flex-wrap:nowrap;margin-top:14px;overflow-x:auto"><button class="btn ghost" onclick="toggleNight()">Day / Night View</button><button class="btn ghost" onclick="openLightbox(0)">Fullscreen Gallery</button><button class="btn ghost" onclick="toggleFav(${p.id});openDetail(${p.id})">${fav?"Saved ♥":"Save ♡"}</button></div></div></div>
+<div class="card" style="padding:0;overflow:hidden"><div style="position:relative"><img id="detailMain" src="${p.images[0]}" style="width:100%;height:420px;object-fit:cover;border-radius:0;cursor:zoom-in" onclick="openLightbox(0)" alt="${p.title}"><span class="chip" style="position:absolute;left:14px;top:14px">${p.status}</span></div><div style="padding:16px"><div style="display:flex;gap:10px;overflow-x:auto">${p.images.map((im,ix)=>`<img src="${im}" style="width:90px;height:64px;object-fit:cover;border-radius:12px;cursor:pointer;flex:0 0 auto;border:2px solid ${ix===0?"var(--gold)":"transparent"}" onclick="setDetailImg(${ix},this)">`).join("")}</div><div class="gallery-actions" style="display:flex;gap:8px;flex-wrap:nowrap;margin-top:14px;overflow-x:auto"><button class="btn ghost" onclick="toggleNight()">Day / Night View</button><button class="btn ghost" onclick="openLightbox(0)">Fullscreen Gallery</button><button class="btn ghost" onclick="toggleFav(${p.id});openDetail(${p.id})">${fav?"Saved ♥":"Save ♡"}</button></div></div></div>
 <div class="card" style="padding:20px"><h3 style="margin-top:0">Payment Plan</h3><div style="overflow:auto"><table><tr><th>Stage</th><th>Share</th><th>Amount</th></tr><tr><td>Booking</td><td>${q.booking}%</td><td>${fmtPKR(booking)}</td></tr><tr><td>Down Payment</td><td>${q.down}%</td><td>${fmtPKR(down)}</td></tr><tr><td>Quarterly Instalments</td><td>${100-q.booking-q.down-q.possession}%</td><td>${fmtPKR(quarterTotal)} total</td></tr><tr><td>On Possession</td><td>${q.possession}%</td><td>${fmtPKR(poss)}</td></tr></table></div><p class="muted" style="font-size:13px">Quarterly amount (split over ${q.quarterly} quarters): <b>${fmtPKR(quarterTotal/Math.max(1,q.quarterly))}</b></p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn" style="flex:1" onclick="openLead('Book Viewing',${p.id})">Book Viewing</button><a class="btn ghost" style="flex:1;text-align:center;text-decoration:none" target="_blank" rel="noopener" href="https://wa.me/447585438180?text=${encodeURIComponent("Hi Aurevo, I want to view "+p.title+" ("+fmtPKR(p.price)+")")}">WhatsApp</a></div></div>
 </div>
 <div class="grid cols2" style="margin-top:16px">
